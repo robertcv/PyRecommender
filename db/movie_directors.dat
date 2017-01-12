@@ -102,14 +102,14 @@ movieID	directorID	directorName
 103	john_dahl	John Dahl
 104	dennis_dugan	Dennis Dugan
 105	clint_eastwood	Clint Eastwood
-106	doris_doerrie	Doris Dˆrrie
+106	doris_doerrie	Doris D√∂rrie
 107	brian_henson	Brian Henson
 110	mel_gibson	Mel Gibson
 111	martin_scorsese	Martin Scorsese
 112	stanley_tong	Stanley Tong
 113	barbet_schroeder	Barbet Schroeder
 114	mort_ransen	Mort Ransen
-115	etienne_chatiliez	…tienne Chatiliez
+115	etienne_chatiliez	√âtienne Chatiliez
 116	john_blair	John Blair
 117	benjamin-ross	Benjamin Ross
 118	eric_schaeffer	Eric Schaeffer
@@ -144,7 +144,7 @@ movieID	directorID	directorName
 151	michael_catonjones	Michael Caton-Jones
 152	michael_catonjones	Michael Caton-Jones
 153	joel_schumacher	Joel Schumacher
-154	luis_bunuel	Luis BuÒuel
+154	luis_bunuel	Luis Bu√±uel
 155	john_boorman	John Boorman
 156	paul_auster	Paul Auster
 157	1055159-michael_moore	Michael Moore
@@ -179,12 +179,12 @@ movieID	directorID	directorName
 186	chris_columbus	Chris Columbus
 187	daisy_von_scherler_mayer	Daisy von Scherler Mayer
 188	gregory_widen	Gregory Widen
-189	max-ophuls	Max Oph¸ls
+189	max-ophuls	Max Oph√ºls
 190	sidney_lumet	Sidney Lumet
-191	roland_joffe	Roland JoffÈ
+191	roland_joffe	Roland Joff√©
 193	paul_verhoeven	Paul Verhoeven
 194	wayne_wang	Wayne Wang
-195	162659443	Lasse Hallstrˆm
+195	162659443	Lasse Hallstr√∂m
 196	roger_donaldson	Roger Donaldson
 197	james_keach	James Keach
 198	kathryn_bigelow	Kathryn Bigelow
@@ -230,7 +230,7 @@ movieID	directorID	directorName
 239	kevin_lima	Kevin Lima
 240	brett_leonard	Brett Leonard
 241	carlo_carlei	Carlo Carlei
-242	gerard_corbiau	GÈrard Corbiau
+242	gerard_corbiau	G√©rard Corbiau
 243	mike_hodges	Mike Hodges
 244	art_clokey	Art Clokey
 245	charles_burnett	Charles Burnett
@@ -250,7 +250,7 @@ movieID	directorID	directorName
 259	barbet_schroeder	Barbet Schroeder
 260	george_lucas	George Lucas
 261	gillian_armstrong	Gillian Armstrong
-262	alfonso_cuaron	Alfonso CuarÛn
+262	alfonso_cuaron	Alfonso Cuar√≥n
 263	ken_loach	Ken Loach
 264	claude_chabrol	Claude Chabrol
 265	alfonso_arau	Alfonso Arau
@@ -290,7 +290,7 @@ movieID	directorID	directorName
 299	antonia_bird	Antonia Bird
 300	robert_redford	Robert Redford
 301	kayo-hatta	Kayo Hatta
-302	patrice_chereau	Patrice ChÈreau
+302	patrice_chereau	Patrice Ch√©reau
 303	sam_raimi	Sam Raimi
 304	peter_yates	Peter Yates
 305	robert_altman	Robert Altman
@@ -308,7 +308,7 @@ movieID	directorID	directorName
 318	frank_darabont	Frank Darabont
 319	danny_boyle	Danny Boyle
 320	scott_mcgehee	Scott McGehee
-321	tomas_gutierrez_alea	Tom·s GutiÈrrez Alea
+321	tomas_gutierrez_alea	Tom√°s Guti√©rrez Alea
 322	george_huang	George Huang
 324	geoff_burton	Geoff Burton
 325	kelly_makin	Kelly Makin
@@ -323,7 +323,7 @@ movieID	directorID	directorName
 334	louis_malle	Louis Malle
 335	steven_soderbergh	Steven Soderbergh
 336	hank_milestone	Umberto Lenzi
-337	162659443	Lasse Hallstrˆm
+337	162659443	Lasse Hallstr√∂m
 338	brett_leonard	Brett Leonard
 339	jon_turteltaub	Jon Turteltaub
 340	david_kim	David Kim
@@ -527,7 +527,7 @@ movieID	directorID	directorName
 545	ferzan_ozpetek	Ferzan Ozpetek
 547	ernest_r_dickerson	Ernest R. Dickerson
 548	deran_sarafian	Deran Sarafian
-549	francois_girard	FranÁois Girard
+549	francois_girard	Fran√ßois Girard
 550	andrew_fleming	Andrew Fleming
 551	henry_selick	Henry Selick
 552	stephen_herek	Stephen Herek
@@ -543,13 +543,13 @@ movieID	directorID	directorName
 564	hongjin_na	Hong-jin Na
 565	guillermo_del_toro	Guillermo del Toro
 566	daniel_algrant	Daniel Algrant
-567	pedro_almodovar	Pedro AlmodÛvar
+567	pedro_almodovar	Pedro Almod√≥var
 568	gurinder_chadha	Gurinder Chadha
 569	andrew_scheinman	Andrew Scheinman
-570	ake-sandgren	≈ke Sandgren
+570	ake-sandgren	√Öke Sandgren
 571	richard_loncraine	Richard Loncraine
 572	eva_sereny	Eva Sereny
-573	lina-wertmuller	Lina Wertm¸ller
+573	lina-wertmuller	Lina Wertm√ºller
 574	david_o_russell	David O. Russell
 575	penelope_spheeris	Penelope Spheeris
 577	1042523-george_miller	George Miller
@@ -587,12 +587,12 @@ movieID	directorID	directorName
 614	ryan_parrott	Ryan Parrott
 615	franco_brusati	Franco Brusati
 616	wolfgang_reitherman	Wolfgang Reitherman
-617	pedro_almodovar	Pedro AlmodÛvar
+617	pedro_almodovar	Pedro Almod√≥var
 618	fernando_trueba	Fernando Trueba
 620	werner_herzog	Werner Herzog
 621	andre_techine	Andre Techine
 623	vern-oakley	Vern Oakley
-624	_0442455	Mika Kaurism‰ki
+624	_0442455	Mika Kaurism√§ki
 625	mustafa_adouani	Mustafa Adouani
 626	martin_lawrence	Martin Lawrence
 627	mats_bigert	Mats Bigert
@@ -609,20 +609,20 @@ movieID	directorID	directorName
 638	tim_sullivan_iii	Tim Sullivan (III)
 639	spike_lee	Spike Lee
 640	jeremiah_s_chechik	Jeremiah S. Chechik
-641	herve_palud	HervÈ Palud
+641	herve_palud	Herv√© Palud
 643	_0738001	Carlo Rola
 645	claude_sautet	Claude Sautet
 647	edward_zwick	Edward Zwick
 648	jj_abrams	J.J. Abrams
 649	fridrik_thor_fridriksson	Fridrik Thor Fridriksson
 650	pen_densham	Pen Densham
-651	_0941811	Sˆnke Wortmann
+651	_0941811	S√∂nke Wortmann
 652	cheolsu-park	Cheol-su Park
 653	rob_cohen	Rob Cohen
 655	michael_verhoeven	Michael Verhoeven
 656	walter_hill	Walter Hill
 658	richard_wherrett	Richard Wherrett
-659	rene_clement	RenÈ ClÈment
+659	rene_clement	Ren√© Cl√©ment
 660	kirsten_sheridan	Kirsten Sheridan
 661	henry_selick	Henry Selick
 662	james_foley	James Foley
@@ -672,7 +672,7 @@ movieID	directorID	directorName
 715	jeanpaul_rappeneau	Jean-Paul Rappeneau
 716	jack_hill	Jack Hill
 717	manuel_gomez_pereira	Manuel Gomez Pereira
-718	jean_marie_poire	Jean-Marie PoirÈ
+718	jean_marie_poire	Jean-Marie Poir√©
 719	harold_ramis	Harold Ramis
 720	nick_park	Nick Park
 722	brett_thompson	Brett Thompson
@@ -716,7 +716,7 @@ movieID	directorID	directorName
 767	charles_matthau	Charles Matthau
 769	_0402383	Chris Hunt
 771	ari_libsker	Ari Libsker
-774	gaston_kabore	Gaston KaborÈ
+774	gaston_kabore	Gaston Kabor√©
 775	federico_fellini	Federico Fellini
 778	danny_boyle	Danny Boyle
 779	scott_winant	Scott Winant
@@ -728,7 +728,7 @@ movieID	directorID	directorName
 785	bobby_farrelly	Bobby Farrelly
 786	charles_russell	Charles Russell
 788	tom_shadyac	Tom Shadyac
-789	_0069833	MarÌa Luisa Bemberg
+789	_0069833	Mar√≠a Luisa Bemberg
 791	yale_strom	Yale Strom
 792	gyula_gazdag	Gyula Gazdag
 793	gerard_mordillat	Gerard Mordillat
@@ -751,7 +751,7 @@ movieID	directorID	directorName
 814	mitch_marcus	Mitch Marcus
 815	_0375476	Jaime Hellman
 818	arlene_sanford	Arlene Sanford
-820	luis_bunuel	Luis BuÒuel
+820	luis_bunuel	Luis Bu√±uel
 821	alex_graves	Alex Graves
 823	eric_rohmer	Eric Rohmer
 824	werner_herzog	Werner Herzog
@@ -782,7 +782,7 @@ movieID	directorID	directorName
 852	ron_shelton	Ron Shelton
 853	fred_schepisi	Fred Schepisi
 858	francis_ford_coppola	Francis Ford Coppola
-860	377794703	Sˆnke Wortmann
+860	377794703	S√∂nke Wortmann
 861	stanley_tong	Stanley Tong
 862	lisa_krueger	Lisa Krueger
 864	robert_schwentke	Robert Schwentke
@@ -830,7 +830,7 @@ movieID	directorID	directorName
 914	george_cukor	George Cukor
 915	billy_wilder	Billy Wilder
 916	william_wyler	William Wyler
-917	alfonso_cuaron	Alfonso CuarÛn
+917	alfonso_cuaron	Alfonso Cuar√≥n
 918	vincente_minnelli	Vincente Minnelli
 919	richard_thorpe	Richard Thorpe
 920	george_cukor	George Cukor
@@ -870,7 +870,7 @@ movieID	directorID	directorName
 954	frank_popper	Frank Popper
 955	howard_hawks	Howard Hawks
 956	george_stevens	George Stevens
-957	roland_joffe	Roland JoffÈ
+957	roland_joffe	Roland Joff√©
 958	william_wellman	William A. Wellman
 959	john_cromwell	John Cromwell
 960	archie_mayo	Archie Mayo
@@ -1012,7 +1012,7 @@ movieID	directorID	directorName
 1113	donald_petrie	Donald Petrie
 1114	abel_ferrara	Abel Ferrara
 1115	joe_nussbaum	Joe Nussbaum
-1116	benoit_jacquot	BenoÓt Jacquot
+1116	benoit_jacquot	Beno√Æt Jacquot
 1117	jaco_van_dormael	Jaco Van Dormael
 1119	paul_thomas_anderson	Paul Thomas Anderson
 1120	milos_forman	Milos Forman
@@ -1048,7 +1048,7 @@ movieID	directorID	directorName
 1154	anthony_mann	Anthony Mann
 1156	vittorio_de_sica	Vittorio De Sica
 1157	jean_delannoy	Jean Delannoy
-1161	volker_schloendorff	Volker Schlˆndorff
+1161	volker_schloendorff	Volker Schl√∂ndorff
 1162	peter_medak	Peter Medak
 1163	martine_dugowson	Martine Dugowson
 1164	jeanluc_godard	Jean-Luc Godard
@@ -1073,7 +1073,7 @@ movieID	directorID	directorName
 1187	john_sayles	John Sayles
 1188	pierre_trividic	Pierre Trividic
 1189	errol_morris	Errol Morris
-1190	pedro_almodovar	Pedro AlmodÛvar
+1190	pedro_almodovar	Pedro Almod√≥var
 1191	alek-keshishian	Alek Keshishian
 1192	jennie-livingston	Jennie Livingston
 1193	milos_forman	Milos Forman
@@ -1152,7 +1152,7 @@ movieID	directorID	directorName
 1271	jon_avnet	Jon Avnet
 1272	franklin_j_schaffner	Franklin J. Schaffner
 1273	jim_jarmusch	Jim Jarmusch
-1274	katsuhiro_otomo	Katsuhiro ‘tomo
+1274	katsuhiro_otomo	Katsuhiro √îtomo
 1275	russell_mulcahy	Russell Mulcahy
 1276	stuart_rosenberg	Stuart Rosenberg
 1277	1041609-michael_gordon	Michael Gordon
@@ -1176,8 +1176,8 @@ movieID	directorID	directorName
 1296	james_ivory	James Ivory
 1297	martha_coolidge	Martha Coolidge
 1298	1042742-alan_parker	Alan Parker
-1299	roland_joffe	Roland JoffÈ
-1300	162659443	Lasse Hallstrˆm
+1299	roland_joffe	Roland Joff√©
+1300	162659443	Lasse Hallstr√∂m
 1301	fred_m_wilcox	Fred M. Wilcox
 1302	phil_alden_robinson	Phil Alden Robinson
 1303	john_huston	John Huston
@@ -1304,9 +1304,9 @@ movieID	directorID	directorName
 1440	e_max_frye	E. Max Frye
 1441	jeremiah_chechik	Jeremiah Chechik
 1442	1053511-steve_james	Steve James
-1444	juan_carlos_tabio	Juan Carlos TabÌo
+1444	juan_carlos_tabio	Juan Carlos Tab√≠o
 1445	bryan_spicer	Bryan Spicer
-1446	jan_sverak	Jan Sver·k
+1446	jan_sverak	Jan Sver√°k
 1447	326391904	Vondie CurtisHall
 1449	christopher_guest	Christopher Guest
 1450	sergey_bodrov	Sergey Bodrov
@@ -1326,7 +1326,7 @@ movieID	directorID	directorName
 1468	jeff_pollack	Jeff Pollack
 1471	1105876-mark_christopher	Mark Christopher
 1472	john_irvin	John Irvin
-1473	alfonso_cuaron	Alfonso CuarÛn
+1473	alfonso_cuaron	Alfonso Cuar√≥n
 1474	john_pasquin	John Pasquin
 1475	mira_nair	Mira Nair
 1476	elwood-perez	Elwood Perez
@@ -1363,7 +1363,7 @@ movieID	directorID	directorName
 1515	mick_jackson	Mick Jackson
 1516	1054857-peter_duncan	Peter Duncan
 1517	jay-roach	Jay Roach
-1518	pedro_almodovar	Pedro AlmodÛvar
+1518	pedro_almodovar	Pedro Almod√≥var
 1519	zoe_r_cassavetes	Zoe R. Cassavetes
 1520	cecil_b_demille	Cecil B. DeMille
 1522	mo_ogrodnik	Mo Ogrodnik
@@ -1376,7 +1376,7 @@ movieID	directorID	directorName
 1531	kevin_bacon	Kevin Bacon
 1532	rusty_cundieff	Rusty Cundieff
 1533	jeanpierre_dardenne	Jean-Pierre Dardenne
-1534	agnes_varda	AgnËs Varda
+1534	agnes_varda	Agn√®s Varda
 1535	joe_mantello	Joe Mantello
 1537	masayuki_suo	Masayuki Suo
 1538	duncan_mclachlan	Duncan McLachlan
@@ -1407,7 +1407,7 @@ movieID	directorID	directorName
 1568	gary_nelson	Gary Nelson
 1569	pj_hogan	P.J. Hogan
 1570	shinya_tsukamoto	Shinya Tsukamoto
-1571	cedric_klapisch	CÈdric Klapisch
+1571	cedric_klapisch	C√©dric Klapisch
 1572	jeanluc_godard	Jean-Luc Godard
 1573	john_woo	John Woo
 1574	tarsem	Tarsem Singh
@@ -1456,7 +1456,7 @@ movieID	directorID	directorName
 1623	robert_kurtzman	Robert Kurtzman
 1624	jocelyn_moorhouse	Jocelyn Moorhouse
 1625	david_fincher	David Fincher
-1626	felix_enriquez_alcala	FÈlix EnrÌquez Alcal·
+1626	felix_enriquez_alcala	F√©lix Enr√≠quez Alcal√°
 1627	oliver_stone	Oliver Stone
 1628	john_schlesinger	John Schlesinger
 1629	mark_joffe	Mark Joffe
@@ -1519,9 +1519,9 @@ movieID	directorID	directorName
 1692	_0365311	Scott Harris
 1693	steven_spielberg	Steven Spielberg
 1694	robert_duvall	Robert Duvall
-1695	agnes_merlet	AgnËs Merlet
+1695	agnes_merlet	Agn√®s Merlet
 1696	sean-mathias	Sean Mathias
-1698	louis-saia	Louis SaÔa
+1698	louis-saia	Louis Sa√Øa
 1699	neil_jordan	Neil Jordan
 1701	woody_allen	Woody Allen
 1702	les_mayfield	Les Mayfield
@@ -1552,7 +1552,7 @@ movieID	directorID	directorName
 1732	joel_coen	Joel Coen
 1733	alan_rudolph	Alan Rudolph
 1734	alain_berliner	Alain Berliner
-1735	alfonso_cuaron	Alfonso CuarÛn
+1735	alfonso_cuaron	Alfonso Cuar√≥n
 1739	sean_mcnamara	Sean McNamara
 1740	george_mendeluk	George Mendeluk
 1742	darin_scott	Darin Scott
@@ -1586,7 +1586,7 @@ movieID	directorID	directorName
 1780	_0668132	Michael Paxton
 1781	robert_dornhelm	Robert Dornhelm
 1782	roberto_benabib	Roberto Benabib
-1783	volker_schloendorff	Volker Schlˆndorff
+1783	volker_schloendorff	Volker Schl√∂ndorff
 1784	james_l_brooks	James L. Brooks
 1785	abel_ferrara	Abel Ferrara
 1788	john_sayles	John Sayles
@@ -1634,7 +1634,7 @@ movieID	directorID	directorName
 1841	robert_altman	Robert Altman
 1842	1196862-nick_gomez	Nick Gomez
 1843	barnet_kellman	Barnet Kellman
-1844	pedro_almodovar	Pedro AlmodÛvar
+1844	pedro_almodovar	Pedro Almod√≥var
 1845	jake_kasdan	Jake Kasdan
 1846	gary_oldman	Gary Oldman
 1848	1052316-peter_hewitt	Peter Hewitt
@@ -1849,7 +1849,7 @@ movieID	directorID	directorName
 2060	david_zucker	David Zucker
 2061	sarah_kelly	Sarah Kelly
 2062	sandra_goldbacher	Sandra Goldbacher
-2063	benoit_jacquot	BenoÓt Jacquot
+2063	benoit_jacquot	Beno√Æt Jacquot
 2064	1055159-michael_moore	Michael Moore
 2065	woody_allen	Woody Allen
 2066	jacques_tourneur	Jacques Tourneur
@@ -1861,7 +1861,7 @@ movieID	directorID	directorName
 2072	joe_dante	Joe Dante
 2073	kevin_reynolds	Kevin Reynolds
 2074	liliana_cavani	Liliana Cavani
-2075	istvan_szabo	Istv·n SzabÛ
+2075	istvan_szabo	Istv√°n Szab√≥
 2076	david_lynch	David Lynch
 2077	jeremy_kagan	Jeremy Kagan
 2078	wolfgang_reitherman	Wolfgang Reitherman
@@ -1975,7 +1975,7 @@ movieID	directorID	directorName
 2189	bill_plympton	Bill Plympton
 2190	gregory_nava	Gregory Nava
 2191	robert_bierman	Robert Bierman
-2192	francois_ozon	FranÁois Ozon
+2192	francois_ozon	Fran√ßois Ozon
 2193	ron_howard	Ron Howard
 2194	brian_de_palma	Brian DePalma
 2195	bob_saget	Bob Saget
@@ -2015,8 +2015,8 @@ movieID	directorID	directorName
 2235	lance_hool	Lance Hool
 2236	mark_johnson	Mark Johnson
 2237	robert_towne	Robert Towne
-2238	lina-wertmuller	Lina Wertm¸ller
-2239	lina-wertmuller	Lina Wertm¸ller
+2238	lina-wertmuller	Lina Wertm√ºller
+2239	lina-wertmuller	Lina Wertm√ºller
 2240	tony_bill	Tony Bill
 2241	lewis_john_carlino	Lewis John Carlino
 2242	randal_kleiser	Randal Kleiser
@@ -2136,9 +2136,9 @@ movieID	directorID	directorName
 2360	thomas_vinterberg	Thomas Vinterberg
 2361	1059231-john_waters	John Waters
 2362	daniel_davis_edward_d_wood_jr	Daniel Davis [Edward D. Wood Jr.]
-2363	inoshiro-honda	IshirÙ Honda
+2363	inoshiro-honda	Ishir√¥ Honda
 2364	roland_emmerich	Roland Emmerich
-2365	inoshiro-honda	IshirÙ Honda
+2365	inoshiro-honda	Ishir√¥ Honda
 2366	peter_jackson	Peter Jackson
 2367	peter_jackson	Peter Jackson
 2368	charles_mccracken_ii	Charles McCracken (II)
@@ -2224,7 +2224,7 @@ movieID	directorID	directorName
 2449	rodney_amateau	Rodney Amateau
 2450	willard_huyck	Willard Huyck
 2451	roman_polanski	Roman Polanski
-2452	tibor_takacs	Tibor Tak·cs
+2452	tibor_takacs	Tibor Tak√°cs
 2453	1040953-nick_castle	Nick Castle
 2454	david_cronenberg	David Cronenberg
 2455	david_cronenberg	David Cronenberg
@@ -2266,7 +2266,7 @@ movieID	directorID	directorName
 2492	myles-berkowitz	Myles Berkowitz
 2493	joseph_vilsmaier	Joseph Vilsmaier
 2494	gus_van_sant	Gus Van Sant
-2495	rene_laloux	RenÈ Laloux
+2495	rene_laloux	Ren√© Laloux
 2496	hugh_wilson	Hugh Wilson
 2497	luis_mandoki	Luis Mandoki
 2499	julia_sweeney	Julia Sweeney
@@ -2314,7 +2314,7 @@ movieID	directorID	directorName
 2541	roger_kumble	Roger Kumble
 2542	guy_ritchie	Guy Ritchie
 2543	adam_bernstein	Adam Bernstein
-2544	benoit_jacquot	BenoÓt Jacquot
+2544	benoit_jacquot	Beno√Æt Jacquot
 2545	pj_castellaneta	P.J. Castellaneta
 2546	ulu_grosbard	Ulu Grosbard
 2548	aluisio_abranches	Aluisio Abranches
@@ -2354,13 +2354,13 @@ movieID	directorID	directorName
 2583	robert_altman	Robert Altman
 2584	erich_von_stroheim	Erich von Stroheim
 2585	julio_medem	Julio Medem
-2586	roland_joffe	Roland JoffÈ
+2586	roland_joffe	Roland Joff√©
 2587	richard_linklater	Richard Linklater
 2589	vince-clark	Vince Clark
 2590	gillies-mackinnon	Gillies MacKinnon
 2591	jacques_martineau	Jacques Martineau
 2593	roberto_benigni	Roberto Benigni
-2594	alejandro_amenabar	Alejandro Amen·bar
+2594	alejandro_amenabar	Alejandro Amen√°bar
 2595	_0412999	Dariusz Jablonski
 2596	james_merendino	James Merendino
 2597	jeff_pollack	Jeff Pollack
@@ -2438,7 +2438,7 @@ movieID	directorID	directorName
 2672	josef_rusnak	Josef Rusnak
 2673	theo-angelopoulos	Theodoros Angelopoulos
 2674	mike_figgis	Mike Figgis
-2675	maria_ripoll	MarÌa Ripoll
+2675	maria_ripoll	Mar√≠a Ripoll
 2676	jon_turteltaub	Jon Turteltaub
 2677	wim_wenders	Wim Wenders
 2678	morgan_j_freeman	Morgan J. Freeman
@@ -2447,7 +2447,7 @@ movieID	directorID	directorName
 2682	john_sayles	John Sayles
 2683	jay-roach	Jay Roach
 2685	_0494467	Yvan Le Moine
-2686	francois_girard	FranÁois Girard
+2686	francois_girard	Fran√ßois Girard
 2687	kevin_lima	Kevin Lima
 2688	simon_west	Simon West
 2689	gil_junger	Gil Junger
@@ -2491,8 +2491,8 @@ movieID	directorID	directorName
 2728	stanley_kubrick	Stanley Kubrick
 2729	stanley_kubrick	Stanley Kubrick
 2730	stanley_kubrick	Stanley Kubrick
-2731	francois_truffaut	FranÁois Truffaut
-2732	francois_truffaut	FranÁois Truffaut
+2731	francois_truffaut	Fran√ßois Truffaut
+2732	francois_truffaut	Fran√ßois Truffaut
 2733	ken_kwapis	Ken Kwapis
 2734	peter_weir	Peter Weir
 2735	michael_ritchie	Michael Ritchie
@@ -2504,7 +2504,7 @@ movieID	directorID	directorName
 2742	bertrand_blier	Bertrand Blier
 2743	jerrold_freedman	Jerrold Freedman
 2744	_0488108	Brian Large
-2745	roland_joffe	Roland JoffÈ
+2745	roland_joffe	Roland Joff√©
 2746	roger_corman	Roger Corman
 2747	roger_corman	Roger Corman
 2748	gary_nelson	Gary Nelson
@@ -2664,8 +2664,8 @@ movieID	directorID	directorName
 2906	sydney_pollack	Sydney Pollack
 2907	bruce_mcculloch	Bruce McCulloch
 2908	kimberly_peirce	Kimberly Peirce
-2910	cedric_kahn	CÈdric Kahn
-2911	_0305054	JosÈ Luis Garci
+2910	cedric_kahn	C√©dric Kahn
+2911	_0305054	Jos√© Luis Garci
 2912	steven_soderbergh	Steven Soderbergh
 2913	jeff_abugov	Jeff Abugov
 2914	mickey_liddell	Mickey Liddell
@@ -2674,7 +2674,7 @@ movieID	directorID	directorName
 2917	lawrence_kasdan	Lawrence Kasdan
 2918	1053315-john_hughes	John Hughes
 2919	peter_weir	Peter Weir
-2920	marcel_carne	Marcel CarnÈ
+2920	marcel_carne	Marcel Carn√©
 2921	clint_eastwood	Clint Eastwood
 2922	ted_post	Ted Post
 2923	jonathan_demme	Jonathan Demme
@@ -2696,7 +2696,7 @@ movieID	directorID	directorName
 2940	charles_vidor	Charles Vidor
 2941	joshua_logan	Joshua Logan
 2942	adrian_lyne	Adrian Lyne
-2943	regis_wargnier	RÈgis Wargnier
+2943	regis_wargnier	R√©gis Wargnier
 2944	robert_aldrich	Robert Aldrich
 2945	james_bridges	James Bridges
 2946	richard_lester	Richard Lester
@@ -2815,11 +2815,11 @@ movieID	directorID	directorName
 3064	kurt_voss	Kurt Voss
 3065	steve_oedekerk	Steve Oedekerk
 3066	richard_fleischer	Richard Fleischer
-3067	pedro_almodovar	Pedro AlmodÛvar
+3067	pedro_almodovar	Pedro Almod√≥var
 3068	sidney_lumet	Sidney Lumet
 3069	paul_newman	Paul Newman
 3070	wd_richter	W.D. Richter
-3071	ramon_menendez	RamÛn MenÈndez
+3071	ramon_menendez	Ram√≥n Men√©ndez
 3072	norman_jewison	Norman Jewison
 3073	claudia_carey	Claudia Carey
 3074	sydney_pollack	Sydney Pollack
@@ -2830,7 +2830,7 @@ movieID	directorID	directorName
 3079	patricia_rozema	Patricia Rozema
 3081	tim_burton	Tim Burton
 3082	ventura_pons	Ventura Pons
-3083	pedro_almodovar	Pedro AlmodÛvar
+3083	pedro_almodovar	Pedro Almod√≥var
 3085	jean_rollin	Jean Rollin
 3086	charley_rogers	Charley Rogers
 3087	richard_donner	Richard Donner
@@ -2893,7 +2893,7 @@ movieID	directorID	directorName
 3145	tim_robbins	Tim Robbins
 3146	eddie_griffin	Eddie Griffin
 3147	frank_darabont	Frank Darabont
-3148	162659443	Lasse Hallstrˆm
+3148	162659443	Lasse Hallstr√∂m
 3149	john_mallory_asher	John Mallory Asher
 3150	lexi_alexander	Lexi Alexander
 3151	roland_west	Roland West
@@ -2969,7 +2969,7 @@ movieID	directorID	directorName
 3225	kris_isacsson	Kris Isacsson
 3226	robert_mugge	Robert Mugge
 3230	ronald_neame	Ronald Neame
-3231	herbert_blache	Herbert BlachÈ
+3231	herbert_blache	Herbert Blach√©
 3232	buster_keaton	Buster Keaton
 3235	art_linson	Art Linson
 3237	mikael_kristersson	Mikael Kristersson
@@ -3001,7 +3001,7 @@ movieID	directorID	directorName
 3263	ron_shelton	Ron Shelton
 3264	fran_rubel_kuzui	Fran Rubel Kuzui
 3265	john_woo	John Woo
-3266	andre_bonzel	AndrÈ Bonzel
+3266	andre_bonzel	Andr√© Bonzel
 3267	robert_rodriguez	Robert Rodriguez
 3268	roger_spottiswoode	Roger Spottiswoode
 3269	steve_miner	Steve Miner
@@ -3048,7 +3048,7 @@ movieID	directorID	directorName
 3319	eric_mendelsohn	Eric Mendelsohn
 3320	anders_w_berthelsen	Anders W. Berthelsen
 3322	dj_pooh	D.J. Pooh
-3323	pontus_lowenhielm	Pontus Lˆwenhielm
+3323	pontus_lowenhielm	Pontus L√∂wenhielm
 3324	1196862-nick_gomez	Nick Gomez
 3325	john_schlesinger	John Schlesinger
 3326	mike_nichols	Mike Nichols
@@ -3080,7 +3080,7 @@ movieID	directorID	directorName
 3353	aileen-ritchie	Aileen Ritchie
 3354	wojciech_wojcik	Wojciech Wojcik
 3355	roman_polanski	Roman Polanski
-3357	regis_wargnier	RÈgis Wargnier
+3357	regis_wargnier	R√©gis Wargnier
 3358	albert_brooks	Albert Brooks
 3359	peter_yates	Peter Yates
 3360	david_anspaugh	David Anspaugh
@@ -3100,7 +3100,7 @@ movieID	directorID	directorName
 3375	irving_pichel	Irving Pichel
 3376	_0478303	Marcel L'Herbier
 3377	fritz_lang	Fritz Lang
-3378	volker_schloendorff	Volker Schlˆndorff
+3378	volker_schloendorff	Volker Schl√∂ndorff
 3379	danny_boyle	Danny Boyle
 3380	anthony_mann	Anthony Mann
 3384	joseph_sargent	Joseph Sargent
@@ -3126,7 +3126,7 @@ movieID	directorID	directorName
 3404	james_cameron	James Cameron
 3405	roy_ward_baker	Roy Ward Baker
 3406	raoul_walsh	Raoul Walsh
-3407	benoit_mariage	BenoÓt Mariage
+3407	benoit_mariage	Beno√Æt Mariage
 3408	steven_soderbergh	Steven Soderbergh
 3409	1036363-james_wong	James Wong
 3410	christina_andreef	Christina Andreef
@@ -3204,7 +3204,7 @@ movieID	directorID	directorName
 3486	david_macdonald	David MacDonald
 3487	don_paul	Don Paul
 3489	steven_spielberg	Steven Spielberg
-3490	eugenio_martin	Eugenio MartÌn
+3490	eugenio_martin	Eugenio Mart√≠n
 3491	david_beaird	David Beaird
 3492	george_fitzmaurice	George Fitzmaurice
 3494	henry_hathaway	Henry Hathaway
@@ -3299,7 +3299,7 @@ movieID	directorID	directorName
 3589	harald_reinl	Harald Reinl
 3590	martin_davidson	Martin Davidson
 3591	stan_dragoti	Stan Dragoti
-3592	rene_laloux	RenÈ Laloux
+3592	rene_laloux	Ren√© Laloux
 3593	roger_christian	Roger Christian
 3594	nicholas_hytner	Nicholas Hytner
 3595	steve_rash	Steve Rash
@@ -3342,8 +3342,8 @@ movieID	directorID	directorName
 3633	peter_r_hunt	Peter R. Hunt
 3634	john_frankenheimer	John Frankenheimer
 3635	lewis_gilbert	Lewis Gilbert
-3636	patrice_chereau	Patrice ChÈreau
-3637	agnes_varda	AgnËs Varda
+3636	patrice_chereau	Patrice Ch√©reau
+3637	agnes_varda	Agn√®s Varda
 3638	lewis_gilbert	Lewis Gilbert
 3639	guy_hamilton	Guy Hamilton
 3640	abel_ferrara	Abel Ferrara
@@ -3351,7 +3351,7 @@ movieID	directorID	directorName
 3642	albert_dekker	Albert Dekker
 3643	edward_ludwig	Edward Ludwig
 3644	raoul_walsh	Raoul Walsh
-3645	agnes_varda	AgnËs Varda
+3645	agnes_varda	Agn√®s Varda
 3646	raja_gosnell	Raja Gosnell
 3648	val_guest	Val Guest
 3649	paul_schrader	Paul Schrader
@@ -3391,7 +3391,7 @@ movieID	directorID	directorName
 3684	steve_kloves	Steve Kloves
 3685	john_huston	John Huston
 3686	joel_schumacher	Joel Schumacher
-3687	rene_laloux	RenÈ Laloux
+3687	rene_laloux	Ren√© Laloux
 3688	bob_clark_iii	Bob Clark (III)
 3689	bob_clark_iii	Bob Clark (III)
 3690	james_komack	James Komack
@@ -3429,7 +3429,7 @@ movieID	directorID	directorName
 3723	kenneth_branagh	Kenneth Branagh
 3724	hal_ashby	Hal Ashby
 3725	ralph_bakshi	Ralph Bakshi
-3726	jean_francois_richet	Jean-FranÁois Richet
+3726	jean_francois_richet	Jean-Fran√ßois Richet
 3727	kathryn_bigelow	Kathryn Bigelow
 3728	carl_franklin	Carl Franklin
 3729	gordon_parks	Gordon Parks
@@ -3449,7 +3449,7 @@ movieID	directorID	directorName
 3743	robert_iscove	Robert Iscove
 3744	gordon_parks	Gordon Parks
 3745	don_bluth	Don Bluth
-3746	jose_luis_cuerda	JosÈ Luis Cuerda
+3746	jose_luis_cuerda	Jos√© Luis Cuerda
 3747	alison_maclean	Alison Maclean
 3748	woody_allen	Woody Allen
 3749	raoul_ruiz	Raoul Ruiz
@@ -3478,7 +3478,7 @@ movieID	directorID	directorName
 3774	doug_mchenry	Doug McHenry
 3775	bob_cormack	Bob Cormack
 3776	hamilton_luske	Hamilton Luske
-3777	jorg_buttgereit	Jˆrg Buttgereit
+3777	jorg_buttgereit	J√∂rg Buttgereit
 3779	richard_talmadge	Richard Talmadge
 3780	kurt_neumann	Kurt Neumann
 3781	john_guillermin	John Guillermin
@@ -3500,7 +3500,7 @@ movieID	directorID	directorName
 3797	mary_lambert	Mary Lambert
 3798	robert_zemeckis	Robert Zemeckis
 3799	kunihiko_yuyama	Kunihiko Yuyama
-3800	francois_ozon	FranÁois Ozon
+3800	francois_ozon	Fran√ßois Ozon
 3801	otto_preminger	Otto Preminger
 3802	geoff_murphy	Geoff Murphy
 3803	albert_henderson	Albert Henderson
@@ -3551,8 +3551,8 @@ movieID	directorID	directorName
 3851	lionel-coleman	Lionel Coleman
 3852	jenniphr_goodman	Jenniphr Goodman
 3853	gary_winick	Gary Winick
-3854	max_faerberboeck	Max F‰rberbˆck
-3855	frederic_fonteyne	FrÈdÈric Fonteyne
+3854	max_faerberboeck	Max F√§rberb√∂ck
+3855	frederic_fonteyne	Fr√©d√©ric Fonteyne
 3857	chuck_russell	Chuck Russell
 3858	1059231-john_waters	John Waters
 3859	fenton_bailey	Fenton Bailey
@@ -3704,7 +3704,7 @@ movieID	directorID	directorName
 4011	guy_ritchie	Guy Ritchie
 4012	david_seltzer	David Seltzer
 4013	yahoo_serious	Yahoo Serious
-4014	162659443	Lasse Hallstrˆm
+4014	162659443	Lasse Hallstr√∂m
 4015	danny_leiner	Danny Leiner
 4016	mark_dindal	Mark Dindal
 4017	harry_moses	Harry Moses
@@ -3752,7 +3752,7 @@ movieID	directorID	directorName
 4060	jonathan_kaplan	Jonathan Kaplan
 4061	milos_forman	Milos Forman
 4062	donald_petrie	Donald Petrie
-4063	norman_rene	Norman RenÈ
+4063	norman_rene	Norman Ren√©
 4064	jack_hill	Jack Hill
 4065	jack_hill	Jack Hill
 4066	hiroshi_nishikiori	Hiroshi Nishikiori
@@ -3762,7 +3762,7 @@ movieID	directorID	directorName
 4070	nadia-tass	Nadia Tass
 4072	_0880521	Liv Ullmann
 4073	adam_brooks	Adam Brooks
-4074	volker_schloendorff	Volker Schlˆndorff
+4074	volker_schloendorff	Volker Schl√∂ndorff
 4076	neil_turitz	Neil Turitz
 4077	dominik_mol	Dominik Mol
 4078	mike_newell	Mike Newell
@@ -3837,8 +3837,8 @@ movieID	directorID	directorName
 4148	hans_zimmer	Hans Zimmer
 4149	dennis_dugan	Dennis Dugan
 4150	jonathan_nossiter	Jonathan Nossiter
-4151	agnes_jaoui	AgnËs Jaoui
-4152	roland_joffe	Roland JoffÈ
+4151	agnes_jaoui	Agn√®s Jaoui
+4152	roland_joffe	Roland Joff√©
 4153	chris_weitz	Chris Weitz
 4154	chuck-sheetz	Chuck Sheetz
 4155	pat_oconnor	Pat O'Connor
@@ -3901,7 +3901,7 @@ movieID	directorID	directorName
 4213	sean_s_cunningham	Sean S. Cunningham
 4214	jeff_kanew	Jeff Kanew
 4215	joe_roth	Joe Roth
-4216	norman_rene	Norman RenÈ
+4216	norman_rene	Norman Ren√©
 4217	spike_lee	Spike Lee
 4218	allan_dwan	Allan Dwan
 4219	alan_metter	Alan Metter
@@ -3920,12 +3920,12 @@ movieID	directorID	directorName
 4232	robert_rodriguez	Robert Rodriguez
 4233	_0201304	Gregory Poirier
 4234	john_boorman	John Boorman
-4235	alejandro_gonzalez_inniaritu	Alejandro Gonz·lez IÒ·rritu
+4235	alejandro_gonzalez_inniaritu	Alejandro Gonz√°lez I√±√°rritu
 4236	david_shapiro	David Shapiro
-4237	agnes_varda	AgnËs Varda
+4237	agnes_varda	Agn√®s Varda
 4238	_1147200	Kevin Gorman
 4239	ted_demme	Ted Demme
-4240	jean_marie_poire	Jean-Marie PoirÈ
+4240	jean_marie_poire	Jean-Marie Poir√©
 4241	kunihiko_yuyama	Kunihiko Yuyama
 4242	bill_eagles	Bill Eagles
 4243	richard_dutcher	Richard Dutcher
@@ -3956,7 +3956,7 @@ movieID	directorID	directorName
 4270	stephen_sommers	Stephen Sommers
 4271	aoyama_shinji	Aoyama Shinji
 4272	veit_helmer	Veit Helmer
-4273	francois_ozon	FranÁois Ozon
+4273	francois_ozon	Fran√ßois Ozon
 4274	joseph_l_mankiewicz	Joseph L. Mankiewicz
 4275	anne_julien	Anne Julien
 4276	albert_brooks	Albert Brooks
@@ -4059,7 +4059,7 @@ movieID	directorID	directorName
 4374	adam_marcus	Adam Marcus
 4375	olivier_ducastel	Olivier Ducastel
 4376	chris_hegedus	Chris Hegedus
-4377	cedric_klapisch	CÈdric Klapisch
+4377	cedric_klapisch	C√©dric Klapisch
 4378	jonathan_glazer	Jonathan Glazer
 4379	dwight_yoakam	Dwight Yoakam
 4380	tom_tykwer	Tom Tykwer
@@ -4071,7 +4071,7 @@ movieID	directorID	directorName
 4386	michael_lehmann	Michael Lehmann
 4387	chris_nahon	Chris Nahon
 4388	keenen_ivory_wayans	Keenen Ivory Wayans
-4389	lea_pool	LÈa Pool
+4389	lea_pool	L√©a Pool
 4390	coralie	Coralie
 4391	tran-anh-hung	Anh Hung Tran
 4393	jerome_foulon	Jerome Foulon
@@ -4080,7 +4080,7 @@ movieID	directorID	directorName
 4396	hal_needham	Hal Needham
 4397	hal_needham	Hal Needham
 4398	jim_drake	Jim Drake
-4399	luis_bunuel	Luis BuÒuel
+4399	luis_bunuel	Luis Bu√±uel
 4401	howard_e_baker	Howard E. Baker
 4402	norman_taurog	Norman Taurog
 4403	roger_corman	Roger Corman
@@ -4115,7 +4115,7 @@ movieID	directorID	directorName
 4432	alexander_mackendrick	Alexander Mackendrick
 4433	douglas_sirk	Douglas Sirk
 4434	elio-petri	Elio Petri
-4435	istvan_szabo	Istv·n SzabÛ
+4435	istvan_szabo	Istv√°n Szab√≥
 4436	brian_de_palma	Brian DePalma
 4437	dario_argento	Dario Argento
 4438	charles_cozart	Charles Cozart
@@ -4162,7 +4162,7 @@ movieID	directorID	directorName
 4482	james_bridges	James Bridges
 4483	allan_arkush	Allan Arkush
 4484	bruno_nuytten	Bruno Nuytten
-4485	genevieve_robert	GeneviËve Robert
+4485	genevieve_robert	Genevi√®ve Robert
 4486	glenn_gordon_caron	Glenn Gordon Caron
 4487	roger_donaldson	Roger Donaldson
 4488	dennis_hopper	Dennis Hopper
@@ -4216,7 +4216,7 @@ movieID	directorID	directorName
 4536	daniel_petrie	Daniel Petrie
 4537	sidney_lumet	Sidney Lumet
 4538	ken_russell	Ken Russell
-4539	joyce_bunuel	Joyce BuÒuel
+4539	joyce_bunuel	Joyce Bu√±uel
 4541	stuart_burge	Stuart Burge
 4542	james_glickenhaus	James Glickenhaus
 4543	roger_spottiswoode	Roger Spottiswoode
@@ -4271,7 +4271,7 @@ movieID	directorID	directorName
 4592	dave_thomas	Dave Thomas
 4593	sidney_lumet	Sidney Lumet
 4594	john_milius	John Milius
-4595	roland_joffe	Roland JoffÈ
+4595	roland_joffe	Roland Joff√©
 4596	gordon_hessler	Gordon Hessler
 4597	graeme_clifford	Graeme Clifford
 4598	valerie_breiman	Valerie Breiman
@@ -4366,7 +4366,7 @@ movieID	directorID	directorName
 4691	paul_donovan	Paul Donovan
 4692	tony_richardson	Tony Richardson
 4693	david_caesar	David Caesar
-4694	jeroen_krabbe	Jeroen KrabbÈ
+4694	jeroen_krabbe	Jeroen Krabb√©
 4695	karel_reisz	Karel Reisz
 4696	peter_medak	Peter Medak
 4697	frank_henenlotter	Frank Henenlotter
@@ -4375,7 +4375,7 @@ movieID	directorID	directorName
 4700	garry_marshall	Garry Marshall
 4701	brett_ratner	Brett Ratner
 4702	_0719348	Pierre-Paul Renders
-4703	162659443	Lasse Hallstrˆm
+4703	162659443	Lasse Hallstr√∂m
 4704	howard_hawks	Howard Hawks
 4705	edouard_molinaro	Edouard Molinaro
 4706	edouard_molinaro	Edouard Molinaro
@@ -4384,7 +4384,7 @@ movieID	directorID	directorName
 4709	joshua_logan	Joshua Logan
 4710	don_siegel	Don Siegel
 4711	steven_m_martin	Steven M. Martin
-4712	francois_truffaut	FranÁois Truffaut
+4712	francois_truffaut	Fran√ßois Truffaut
 4713	ken_russell	Ken Russell
 4714	buddy_van_horn	Buddy Van Horn
 4715	basil_gelpke_ray_mccormack	Basil Gelpke & Ray McCormack
@@ -4392,7 +4392,7 @@ movieID	directorID	directorName
 4717	robert_clouse	Robert Clouse
 4718	chris_weitz	Chris Weitz
 4719	bobby_farrelly	Bobby Farrelly
-4720	alejandro_amenabar	Alejandro Amen·bar
+4720	alejandro_amenabar	Alejandro Amen√°bar
 4721	les_mayfield	Les Mayfield
 4722	julie_davis	Julie Davis
 4723	scott_mcgehee	Scott McGehee
@@ -4413,7 +4413,7 @@ movieID	directorID	directorName
 4739	griffin_dunne	Griffin Dunne
 4740	ben_elton	Ben Elton
 4741	lukas_moodysson	Lukas Moodysson
-4743	maria_ripoll	MarÌa Ripoll
+4743	maria_ripoll	Mar√≠a Ripoll
 4744	victor_salva	Victor Salva
 4745	tim_blake_nelson	Tim Blake Nelson
 4746	jordan_brady	Jordan Brady
@@ -4482,7 +4482,7 @@ movieID	directorID	directorName
 4810	1060941-anthony_page	Anthony Page
 4811	franc_roddam	Franc Roddam
 4812	harry_winer	Harry Winer
-4813	_0005789	Rudolph MatÈ
+4813	_0005789	Rudolph Mat√©
 4814	gary_fleder	Gary Fleder
 4815	scott_hicks	Scott Hicks
 4816	ben_stiller	Ben Stiller
@@ -4509,7 +4509,7 @@ movieID	directorID	directorName
 4837	william_friedkin	William Friedkin
 4838	corey_yuen	Corey Yuen
 4839	alvin_rakoff	Alvin Rakoff
-4840	francois_truffaut	FranÁois Truffaut
+4840	francois_truffaut	Fran√ßois Truffaut
 4841	michael_ritchie	Michael Ritchie
 4842	john_irvin	John Irvin
 4843	eric_schwab	Eric Schwab
@@ -4538,10 +4538,10 @@ movieID	directorID	directorName
 4866	rod_lurie	Rod Lurie
 4867	penny_marshall	Penny Marshall
 4868	oxide_pang_chun	Oxide Pang Chun
-4869	marcelo_pineyro	Marcelo PiÒeyro
+4869	marcelo_pineyro	Marcelo Pi√±eyro
 4870	michael_radford	Michael Radford
 4871	paul_schrader	Paul Schrader
-4872	patrice_chereau	Patrice ChÈreau
+4872	patrice_chereau	Patrice Ch√©reau
 4873	richard_linklater	Richard Linklater
 4874	iain_softley	Iain Softley
 4875	eric_bross	Eric Bross
@@ -4591,7 +4591,7 @@ movieID	directorID	directorName
 4925	robert_moore	Robert Moore
 4926	dominique_deruddere	Dominique Deruddere
 4927	peter_weir	Peter Weir
-4928	luis_bunuel	Luis BuÒuel
+4928	luis_bunuel	Luis Bu√±uel
 4929	john_lasseter	John Lasseter
 4930	guy_hamilton	Guy Hamilton
 4931	joseph_ellison	Joseph Ellison
@@ -4630,7 +4630,7 @@ movieID	directorID	directorName
 4966	jack_arnold	Jack Arnold
 4967	danis_tanovic	Danis Tanovic
 4968	leon_ichaso	Leon Ichaso
-4969	rene_clair	RenÈ Clair
+4969	rene_clair	Ren√© Clair
 4970	josef_von_sternberg	Josef von Sternberg
 4971	paul_mazursky	Paul Mazursky
 4972	herbert_ross	Herbert Ross
@@ -4677,14 +4677,14 @@ movieID	directorID	directorName
 5013	robert_altman	Robert Altman
 5014	jessie_nelson	Jessie Nelson
 5015	marc_forster	Marc Forster
-5016	162659443	Lasse Hallstrˆm
+5016	162659443	Lasse Hallstr√∂m
 5017	fritz_lang	Fritz Lang
 5018	barry_shils	Barry Shils
 5019	barry_sullivan	Barry Sullivan
 5020	russell_mulcahy	Russell Mulcahy
 5021	robert_moore	Robert Moore
 5022	joseph_losey	Joseph Losey
-5023	elizabeth_pena	Elizabeth PeÒa
+5023	elizabeth_pena	Elizabeth Pe√±a
 5024	silvio_soldini	Silvio Soldini
 5025	jake_kasdan	Jake Kasdan
 5026	christophe_gans	Christophe Gans
@@ -4711,7 +4711,7 @@ movieID	directorID	directorName
 5047	steve_oedekerk	Steve Oedekerk
 5048	brian_levant	Brian Levant
 5049	walter_hill	Walter Hill
-5050	jan-schutte	Jan Sch¸tte
+5050	jan-schutte	Jan Sch√ºtte
 5051	lone_scherfig	Lone Scherfig
 5052	joseph_cedar	Joseph Cedar
 5053	mike_binder	Mike Binder
@@ -4760,7 +4760,7 @@ movieID	directorID	directorName
 5097	stuart_marshall	Stuart Marshall
 5098	1028179-william_a_seiter	William A. Seiter
 5099	delbert_mann	Delbert Mann
-5100	francois_truffaut	FranÁois Truffaut
+5100	francois_truffaut	Fran√ßois Truffaut
 5101	richard_pryor	Richard Pryor
 5102	daniel_stern	Daniel Stern
 5103	david_m_evans	David M. Evans
@@ -4834,7 +4834,7 @@ movieID	directorID	directorName
 5173	david_caffrey	David Caffrey
 5174	jim_sheridan	Jim Sheridan
 5175	ken_loach	Ken Loach
-5176	jose-luis-valenzuela	JosÈ Luis Valenzuela
+5176	jose-luis-valenzuela	Jos√© Luis Valenzuela
 5177	orson_welles	Orson Welles
 5178	ken_kwapis	Ken Kwapis
 5179	sidney_lumet	Sidney Lumet
@@ -4882,7 +4882,7 @@ movieID	directorID	directorName
 5222	charles_hermanwurmfeld	Charles Herman-Wurmfeld
 5223	lieven_debrauwer	Lieven Debrauwer
 5224	david_cronenberg	David Cronenberg
-5225	alfonso_cuaron	Alfonso CuarÛn
+5225	alfonso_cuaron	Alfonso Cuar√≥n
 5226	michael_chapman	Michael Chapman
 5227	richard_fleischer	Richard Fleischer
 5228	1042400-george_marshall	George Marshall
@@ -4908,14 +4908,14 @@ movieID	directorID	directorName
 5248	_0523310	Dick Lowry
 5249	paul_verhoeven	Paul Verhoeven
 5250	sidney_poitier	Sidney Poitier
-5251	lasse_aberg	Lasse ≈berg
+5251	lasse_aberg	Lasse √Öberg
 5253	joel_shumacher	Joel Shumacher
 5254	guillermo_del_toro	Guillermo del Toro
 5255	wallace_wolodarsky	Wallace Wolodarsky
 5256	_0971919	Pete Jones
 5258	david_gordon_green	David Gordon Green
 5259	jean_de_segonzac	Jean de Segonzac
-5260	fernando_perez	Fernando PÈrez
+5260	fernando_perez	Fernando P√©rez
 5262	william_castle	William Castle
 5263	william_castle	William Castle
 5264	jonathan_frakes	Jonathan Frakes
@@ -4938,7 +4938,7 @@ movieID	directorID	directorName
 5283	walt_becker	Walt Becker
 5284	1143611-john_mckay	John McKay
 5285	peter_cattaneo	Peter Cattaneo
-5286	bruno_pesery	Bruno PÈsery
+5286	bruno_pesery	Bruno P√©sery
 5287	james_foley	James Foley
 5288	jayne-loader	Jayne Loader
 5289	robert_rosen	Robert Rosen
@@ -4971,7 +4971,7 @@ movieID	directorID	directorName
 5316	michael_apted	Michael Apted
 5317	annesophie_birot	Anne-Sophie Birot
 5318	george_ratliff	George Ratliff
-5319	fabian_bielinsky	Fabi·n Bielinsky
+5319	fabian_bielinsky	Fabi√°n Bielinsky
 5321	clare_peploe	Clare Peploe
 5322	bart_freundlich	Bart Freundlich
 5323	james_isaac	James Isaac
@@ -5053,11 +5053,11 @@ movieID	directorID	directorName
 5400	phil_alden_robinson	Phil Alden Robinson
 5401	gregory-dark	Gregory Dark
 5402	1143213-paul_cox	Paul Cox
-5403	christopher_muench	Christopher M¸nch
+5403	christopher_muench	Christopher M√ºnch
 5404	david-hugh-jones	David Hugh Jones
 5405	joseph_kane	Joseph Kane
 5406	robert_wise	Robert Wise
-5407	daniele_thompson	DaniËle Thompson
+5407	daniele_thompson	Dani√®le Thompson
 5408	akira_kurosawa	Akira Kurosawa
 5409	dwight_h_little	Dwight H. Little
 5410	douglas_trumbull	Douglas Trumbull
@@ -5075,7 +5075,7 @@ movieID	directorID	directorName
 5422	alan_taylor	Alan Taylor
 5423	paul_mcguigan	Paul McGuigan
 5424	james_toback	James Toback
-5425	jan_sverak	Jan Sver·k
+5425	jan_sverak	Jan Sver√°k
 5426	joel_schumacher	Joel Schumacher
 5427	carl_gottlieb	Carl Gottlieb
 5428	tommy_chong	Tommy Chong
@@ -5152,7 +5152,7 @@ movieID	directorID	directorName
 5502	m_night_shyamalan	M. Night Shyamalan
 5503	gabriele_muccino	Gabriele Muccino
 5504	robert_rodriguez	Robert Rodriguez
-5505	busi_cortes	Busi CortÈs
+5505	busi_cortes	Busi Cort√©s
 5506	clint_eastwood	Clint Eastwood
 5507	rob_cohen	Rob Cohen
 5508	michael_winterbottom	Michael Winterbottom
@@ -5206,7 +5206,7 @@ movieID	directorID	directorName
 5557	melanie_mayron	Melanie Mayron
 5558	kantz	Kantz
 5559	vicente_aranda	Vicente Aranda
-5560	rene_clair	RenÈ Clair
+5560	rene_clair	Ren√© Clair
 5561	herbert_ross	Herbert Ross
 5562	stephen_norrington	Stephen Norrington
 5563	michael_catonjones	Michael Caton-Jones
@@ -5214,7 +5214,7 @@ movieID	directorID	directorName
 5567	anya_camilleri	Anya Camilleri
 5568	amy_heckerling	Amy Heckerling
 5569	dennis-iliadis	Dennis Iliadis
-5570	alejandro_amenabar	Alejandro Amen·bar
+5570	alejandro_amenabar	Alejandro Amen√°bar
 5572	kevin_rodney_sullivan	Kevin Rodney Sullivan
 5573	bruce_mcculloch	Bruce McCulloch
 5574	corey_yuen	Corey Yuen
@@ -5247,13 +5247,13 @@ movieID	directorID	directorName
 5604	alexander_mackendrick	Alexander Mackendrick
 5605	lynne_ramsay	Lynne Ramsay
 5606	brian_yuzna	Brian Yuzna
-5607	juan_jose_campanella	Juan JosÈ Campanella
+5607	juan_jose_campanella	Juan Jos√© Campanella
 5608	oliver_hirschbiegel	Oliver Hirschbiegel
 5609	wych_kaosayananda	Wych Kaosayananda
 5610	bob_dolman	Bob Dolman
 5611	shekhar_kapur	Shekhar Kapur
 5612	luis_mandoki	Luis Mandoki
-5613	francois_ozon	FranÁois Ozon
+5613	francois_ozon	Fran√ßois Ozon
 5614	ferzan_ozpetek	Ferzan Ozpetek
 5615	ericson-core	Ericson Core
 5616	gil-cates-jr	Gil Cates Jr.
@@ -5268,7 +5268,7 @@ movieID	directorID	directorName
 5625	brad_silberling	Brad Silberling
 5626	amir_mann	Amir Mann
 5627	chris_eyre	Chris Eyre
-5628	gerard_krawczyk	GÈrard Krawczyk
+5628	gerard_krawczyk	G√©rard Krawczyk
 5629	phil_vischer	Phil Vischer
 5630	brett_ratner	Brett Ratner
 5631	edoardo_ponti	Edoardo Ponti
@@ -5278,9 +5278,9 @@ movieID	directorID	directorName
 5635	george_hickenlooper	George Hickenlooper
 5636	anthony_russo	Anthony Russo
 5637	david_o_russell	David O. Russell
-5638	inoshiro-honda	IshirÙ Honda
+5638	inoshiro-honda	Ishir√¥ Honda
 5639	kevin_reynolds	Kevin Reynolds
-5640	inoshiro-honda	IshirÙ Honda
+5640	inoshiro-honda	Ishir√¥ Honda
 5641	charlie_s_chaplin	Charlie S. Chaplin
 5642	harold_becker	Harold Becker
 5643	godfrey_reggio	Godfrey Reggio
@@ -5378,7 +5378,7 @@ movieID	directorID	directorName
 5738	john_alan_schwartz	John Alan Schwartz
 5739	john_alan_schwartz	John Alan Schwartz
 5740	john_alan_schwartz	John Alan Schwartz
-5741	francois_truffaut	FranÁois Truffaut
+5741	francois_truffaut	Fran√ßois Truffaut
 5742	ronald_neame	Ronald Neame
 5743	daniel_petrie	Daniel Petrie
 5744	arthur_penn	Arthur Penn
@@ -5401,7 +5401,7 @@ movieID	directorID	directorName
 5763	rainer_werner_fassbinder	Rainer Werner Fassbinder
 5764	michael_crichton	Michael Crichton
 5765	friz_freleng	Friz Freleng
-5766	tibor_takacs	Tibor Tak·cs
+5766	tibor_takacs	Tibor Tak√°cs
 5767	stanislaw_bareja	Stanislaw Bareja
 5768	ken-shapiro	Ken Shapiro
 5769	albert_brooks	Albert Brooks
@@ -5563,14 +5563,14 @@ movieID	directorID	directorName
 5936	robert_allman	Robert Allman
 5937	andrzej_wajda	Andrzej Wajda
 5938	sidney_lumet	Sidney Lumet
-5939	cetin_inanc	«etin InanÁ
+5939	cetin_inanc	√áetin Inan√ß
 5940	paul_bartel	Paul Bartel
 5941	charles_stone_iii	Charles Stone
 5942	1140240-tom_brady	Tom Brady
 5943	wayne_wang	Wayne Wang
 5944	stuart_baird	Stuart Baird
 5945	alexander_payne	Alexander Payne
-5946	achero_manas_ii	Achero MaÒas
+5946	achero_manas_ii	Achero Ma√±as
 5947	bruce_beresford	Bruce Beresford
 5949	juan_carlos_fresnadillo	Juan Carlos Fresnadillo
 5950	frank_whaley	Frank Whaley
@@ -5663,7 +5663,7 @@ movieID	directorID	directorName
 6040	jonathan_liebesman	Jonathan Liebesman
 6041	costagavras	Costa-Gavras
 6042	othmar_schmiderer	Othmar Schmiderer
-6043	martina_kudlacek	Martina Kudl·cek
+6043	martina_kudlacek	Martina Kudl√°cek
 6044	blake_edwards	Blake Edwards
 6045	kantz	Kantz
 6047	john_cromwell	John Cromwell
@@ -5707,7 +5707,7 @@ movieID	directorID	directorName
 6088	jerry_belson	Jerry Belson
 6089	mikael_ekman	Mikael Ekman
 6090	robert_mulligan	Robert Mulligan
-6091	pedro_almodovar	Pedro AlmodÛvar
+6091	pedro_almodovar	Pedro Almod√≥var
 6092	boaz_davidson	Boaz Davidson
 6093	jules_bass	Jules Bass
 6094	slava_tsukerman	Slava Tsukerman
@@ -5717,7 +5717,7 @@ movieID	directorID	directorName
 6099	hal_needham	Hal Needham
 6100	woody_allen	Woody Allen
 6101	ron_howard	Ron Howard
-6102	roland_joffe	Roland JoffÈ
+6102	roland_joffe	Roland Joff√©
 6103	frank_perry	Frank Perry
 6104	terry_hughes	Terry Hughes
 6106	charlton_heston	Charlton Heston
@@ -5733,7 +5733,7 @@ movieID	directorID	directorName
 6116	gore_verbinski	Gore Verbinski
 6117	michael_blakemore	Michael Blakemore
 6118	krzysztof_kieslowski	Krzysztof Kieslowski
-6119	jean_marie_poire	Jean-Marie PoirÈ
+6119	jean_marie_poire	Jean-Marie Poir√©
 6120	1041041-larry_cohen	Larry Cohen
 6121	rainer_werner_fassbinder	Rainer Werner Fassbinder
 6122	joe_layton	Joe Layton
@@ -5742,7 +5742,7 @@ movieID	directorID	directorName
 6125	julien_temple	Julien Temple
 6126	rainer_werner_fassbinder	Rainer Werner Fassbinder
 6127	1042742-alan_parker	Alan Parker
-6128	_0073322	Alain BerbÈrian
+6128	_0073322	Alain Berb√©rian
 6129	tony_bill	Tony Bill
 6130	paul_anderson	Paul W.S. Anderson
 6131	michael_pressman	Michael Pressman
@@ -5764,7 +5764,7 @@ movieID	directorID	directorName
 6148	samuel_fuller	Samuel Fuller
 6149	ian_sharp	Ian Sharp
 6150	richard_brooks_i	Richard Brooks I
-6151	serif-goren	Serif Gˆren
+6151	serif-goren	Serif G√∂ren
 6152	antonio_margheriti	Antonio Margheriti
 6153	robert_j_rosenthal	Robert J. Rosenthal
 6154	gary_hardwick	Gary Hardwick
@@ -5824,7 +5824,7 @@ movieID	directorID	directorName
 6211	kevin_lima	Kevin Lima
 6212	adam_shankman	Adam Shankman
 6213	antoine_fuqua	Antoine Fuqua
-6214	_0637615	Gaspar NoÈ
+6214	_0637615	Gaspar No√©
 6215	lisa_cholodenko	Lisa Cholodenko
 6216	caroline_link	Caroline Link
 6217	rose_troche	Rose Troche
@@ -5833,10 +5833,10 @@ movieID	directorID	directorName
 6220	glen_morgan	Glen Morgan
 6221	susan_seidelman	Susan Seidelman
 6222	erik_skjoldbjaerg	Erik Skjoldbjaerg
-6223	jonas-akerlund	Jonas ≈kerlund
+6223	jonas-akerlund	Jonas √Ökerlund
 6224	rakhshan_bani_etemad	Rakhshan Bani Etemad
 6225	nicholas_ray	Nicholas Ray
-6226	volker_schloendorff	Volker Schlˆndorff
+6226	volker_schloendorff	Volker Schl√∂ndorff
 6228	george_stevens	George Stevens
 6229	monte_hellman	Monte Hellman
 6230	john_d_hancock	John D. Hancock
@@ -5857,7 +5857,7 @@ movieID	directorID	directorName
 6245	bob_fosse	Bob Fosse
 6246	robert_m_young	Robert M. Young
 6247	karen_everett	Karen Everett
-6248	carlos_reygadas_barquin	Carlos Reygadas BarquÌn
+6248	carlos_reygadas_barquin	Carlos Reygadas Barqu√≠n
 6249	mort_nathan	Mort Nathan
 6250	_0705655	Ed Radtke
 6251	francis-glebas	Francis Glebas
@@ -5865,7 +5865,7 @@ movieID	directorID	directorName
 6254	leo_mccarey	Leo McCarey
 6255	daniel_g_karslake	Daniel G. Karslake
 6256	pupi_avati	Pupi Avati
-6257	vilgot_sjoman	Vilgot Sjˆman
+6257	vilgot_sjoman	Vilgot Sj√∂man
 6258	robert_bresson	Robert Bresson
 6259	michael_mayer_vi	Michael Mayer (VI)
 6260	bruce_beresford	Bruce Beresford
@@ -5879,7 +5879,7 @@ movieID	directorID	directorName
 6268	peter_sollett	Peter Sollett
 6269	david_teboul	David Teboul
 6270	akira_kurosawa	Akira Kurosawa
-6271	francois_truffaut	FranÁois Truffaut
+6271	francois_truffaut	Fran√ßois Truffaut
 6272	tim_blake_nelson	Tim Blake Nelson
 6273	nicholas_ray	Nicholas Ray
 6274	michael_crichton	Michael Crichton
@@ -5890,11 +5890,11 @@ movieID	directorID	directorName
 6279	neil_jordan	Neil Jordan
 6280	f_gary_gray	F. Gary Gray
 6281	joel_schumacher	Joel Schumacher
-6282	josee_dayan	JosÈe Dayan
-6283	shinichiro_watanabe	ShinichirÙ Watanabe
+6282	josee_dayan	Jos√©e Dayan
+6283	shinichiro_watanabe	Shinichir√¥ Watanabe
 6284	george_gallo	George Gallo
 6285	ed_solomon	Ed Solomon
-6286	aki_kaurismaeki	Aki Kaurism‰ki
+6286	aki_kaurismaeki	Aki Kaurism√§ki
 6287	peter_segal	Peter Segal
 6288	justin_lin	Justin Lin
 6289	james_cameron	James Cameron
@@ -5913,7 +5913,7 @@ movieID	directorID	directorName
 6302	bert_i_gordon	Bert I. Gordon
 6303	mikael_salomon	Mikael Salomon
 6304	john-flynn	John Flynn
-6305	francois_truffaut	FranÁois Truffaut
+6305	francois_truffaut	Fran√ßois Truffaut
 6306	sam_jones	Sam Jones
 6307	john_frankenheimer	John Frankenheimer
 6308	ivan_reitman	Ivan Reitman
@@ -5927,7 +5927,7 @@ movieID	directorID	directorName
 6316	sidney_lumet	Sidney Lumet
 6317	philippe_de_broca	Philippe de Broca
 6318	jerry-rees	Jerry Rees
-6319	gerard_lauzier	GÈrard Lauzier
+6319	gerard_lauzier	G√©rard Lauzier
 6320	paul_mazursky	Paul Mazursky
 6321	kevin_rodney_sullivan	Kevin Rodney Sullivan
 6322	james_foley	James Foley
@@ -5952,7 +5952,7 @@ movieID	directorID	directorName
 6341	neil_labute	Neil LaBute
 6342	1045105-todd_phillips	Todd Phillips
 6343	alfredo_de_villa	Alfredo De Villa
-6344	baltasar_kormakur	Baltasar Korm·kur
+6344	baltasar_kormakur	Baltasar Korm√°kur
 6345	richard_attenborough	Richard Attenborough
 6346	julien_temple	Julien Temple
 6347	stan_lathan	Stan Lathan
@@ -5972,7 +5972,7 @@ movieID	directorID	directorName
 6367	tamas-sas	Tamas Sas
 6368	angela_christlieb	Angela Christlieb
 6369	kristen_coury	Kristen Coury
-6370	cedric_klapisch	CÈdric Klapisch
+6370	cedric_klapisch	C√©dric Klapisch
 6371	jim_malone	Jim Malone
 6373	tom_shadyac	Tom Shadyac
 6374	andrew_fleming	Andrew Fleming
@@ -5995,7 +5995,7 @@ movieID	directorID	directorName
 6394	george_sherman	George Sherman
 6395	clyde_bruckman	Clyde Bruckman
 6396	francis_ford_coppola	Francis Ford Coppola
-6397	marcel_carne	Marcel CarnÈ
+6397	marcel_carne	Marcel Carn√©
 6398	lee_h_katzin	Lee H. Katzin
 6400	jean_xavier_de_lestrade	Jean-Xavier de Lestrade
 6401	howard_hawks	Howard Hawks
@@ -6082,7 +6082,7 @@ movieID	directorID	directorName
 6485	john-eng	John Eng
 6486	1162568-scott_roberts	Scott Roberts
 6487	thaddeus_osullivan	Thaddeus O'Sullivan
-6488	daniele_thompson	DaniËle Thompson
+6488	daniele_thompson	Dani√®le Thompson
 6489	bryan_lewis	Bryan Lewis
 6490	eric_eason	Eric Eason
 6491	phillip_rhee	Phillip Rhee
@@ -6091,7 +6091,7 @@ movieID	directorID	directorName
 6494	jed_weintrob	Jed Weintrob
 6495	blake_edwards	Blake Edwards
 6496	mariano_barroso	Mariano Barroso
-6497	rene_clement	RenÈ ClÈment
+6497	rene_clement	Ren√© Cl√©ment
 6498	peter_yates	Peter Yates
 6499	dw_griffith	D.W. Griffith
 6500	alan_gibson	Alan Gibson
@@ -6131,7 +6131,7 @@ movieID	directorID	directorName
 6535	charles_hermanwurmfeld	Charles Herman-Wurmfeld
 6536	patrick_gilmore_iii	Patrick Gilmore (III)
 6537	jonathan_mostow	Jonathan Mostow
-6538	francois_ozon	FranÁois Ozon
+6538	francois_ozon	Fran√ßois Ozon
 6539	gore_verbinski	Gore Verbinski
 6540	karim_ainouz	Karim Ainouz
 6541	stephen_norrington	Stephen Norrington
@@ -6164,7 +6164,7 @@ movieID	directorID	directorName
 6568	todd_graff	Todd Graff
 6569	mike_figgis	Mike Figgis
 6570	antonio-serrano	Antonio Serrano
-6571	fernando_leon_de_aranoa	Fernando LeÛn de Aranoa
+6571	fernando_leon_de_aranoa	Fernando Le√≥n de Aranoa
 6572	gavin-grazer	Gavin Grazer
 6573	billy_wilder	Billy Wilder
 6574	duncan-gibbins	Duncan Gibbins
@@ -6222,7 +6222,7 @@ movieID	directorID	directorName
 6630	mark_robson	Mark Robson
 6631	john_lafia	John Lafia
 6633	gabriel_axel	Gabriel Axel
-6634	gonzalo_suarez	Gonzalo Su·rez
+6634	gonzalo_suarez	Gonzalo Su√°rez
 6635	damian_harris	Damian Harris
 6636	rob_reiner	Rob Reiner
 6637	david_winters	David Winters
@@ -6241,10 +6241,10 @@ movieID	directorID	directorName
 6651	edward_burns	Edward Burns
 6652	john_sturges	John Sturges
 6653	michael_mann	Michael Mann
-6654	inoshiro-honda	IshirÙ Honda
-6655	inoshiro-honda	IshirÙ Honda
+6654	inoshiro-honda	Ishir√¥ Honda
+6655	inoshiro-honda	Ishir√¥ Honda
 6656	bert_i_gordon	Bert I. Gordon
-6657	eugene_lourie	EugËne LouriÈ
+6657	eugene_lourie	Eug√®ne Louri√©
 6658	kevin_lima	Kevin Lima
 6659	ron_underwood	Ron Underwood
 6660	michael_powell	Michael Powell
@@ -6253,7 +6253,7 @@ movieID	directorID	directorName
 6663	blake_edwards	Blake Edwards
 6664	mark_l_lester	Mark L. Lester
 6665	tod_browning	Tod Browning
-6666	luis_bunuel	Luis BuÒuel
+6666	luis_bunuel	Luis Bu√±uel
 6667	william_gazecki	William Gazecki
 6668	zhang_yimou	Yimou Zhang
 6669	akira_kurosawa	Akira Kurosawa
@@ -6264,7 +6264,7 @@ movieID	directorID	directorName
 6674	anand_patwardhan	Anand Patwardhan
 6675	andre_techine	Andre Techine
 6676	michael_apted	Michael Apted
-6678	volker_schloendorff	Volker Schlˆndorff
+6678	volker_schloendorff	Volker Schl√∂ndorff
 6679	jts_moore	J.T.S. Moore
 6680	julia_query	Julia Query
 6681	1050543-jeremy_thomas	Jeremy Thomas
@@ -6274,9 +6274,9 @@ movieID	directorID	directorName
 6685	richard_benjamin	Richard Benjamin
 6686	gordon_chan	Gordon Chan
 6687	david_zucker	David Zucker
-6688	vladimir_michalek	VladimÌr Mich·lek
+6688	vladimir_michalek	Vladim√≠r Mich√°lek
 6689	efram_potelle	Efram Potelle
-6690	agustin_diaz_yanes	AgustÌn DÌaz Yanes
+6690	agustin_diaz_yanes	Agust√≠n D√≠az Yanes
 6691	robert_towne	Robert Towne
 6692	helen_stickler	Helen Stickler
 6693	gabriel_baur	Gabriel Baur
@@ -6286,7 +6286,7 @@ movieID	directorID	directorName
 6697	neema_barnette	Neema Barnette
 6698	alan_hruska	Alan Hruska
 6699	shane_meadows	Shane Meadows
-6700	emilio_martinez_lazaro	Emilio MartÌnez L·zaro
+6700	emilio_martinez_lazaro	Emilio Mart√≠nez L√°zaro
 6701	bryan-gunnar-cole	Bryan Gunnar Cole
 6702	sam_weisman	Sam Weisman
 6703	ted_kotcheff	Ted Kotcheff
@@ -6303,7 +6303,7 @@ movieID	directorID	directorName
 6714	corey_yuen	Corey Yuen
 6715	tony_randel	Tony Randel
 6716	peter_bogdanovich	Peter Bogdanovich
-6717	doris_doerrie	Doris Dˆrrie
+6717	doris_doerrie	Doris D√∂rrie
 6718	jeff_kanew	Jeff Kanew
 6719	larry_peerce	Larry Peerce
 6720	bruce_a_evans	Bruce A. Evans
@@ -6328,7 +6328,7 @@ movieID	directorID	directorName
 6739	hal_walker	Hal Walker
 6740	matthew_robbins	Matthew Robbins
 6741	1041041-larry_cohen	Larry Cohen
-6742	tibor_takacs	Tibor Tak·cs
+6742	tibor_takacs	Tibor Tak√°cs
 6743	wolfgang_reitherman	Wolfgang Reitherman
 6744	howard_storm	Howard Storm
 6745	michael_gottlieb	Michael Gottlieb
@@ -6353,7 +6353,7 @@ movieID	directorID	directorName
 6765	1055381-audrey_wells	Audrey Wells
 6766	hamlet_sarkissian	Hamlet Sarkissian
 6768	eric_till	Eric Till
-6769	emile_gaudreault	…mile Gaudreault
+6769	emile_gaudreault	√âmile Gaudreault
 6770	koji_kawano	Koji Kawano
 6771	david_hillenbrand	David Hillenbrand
 6772	nicolas_philibert	Nicolas Philibert
@@ -6366,7 +6366,7 @@ movieID	directorID	directorName
 6779	robert_mulligan	Robert Mulligan
 6780	errol_morris	Errol Morris
 6781	frank_beyer	Frank Beyer
-6782	aki_kaurismaeki	Aki Kaurism‰ki
+6782	aki_kaurismaeki	Aki Kaurism√§ki
 6783	jean_renoir	Jean Renoir
 6784	peter-clifton	Peter Clifton
 6785	stanley_donen	Stanley Donen
@@ -6529,7 +6529,7 @@ movieID	directorID	directorName
 6950	ron_howard	Ron Howard
 6951	bo_welch	Bo Welch
 6952	mathieu_kassovitz	Mathieu Kassovitz
-6953	alejandro_gonzalez_inniaritu	Alejandro Gonz·lez IÒ·rritu
+6953	alejandro_gonzalez_inniaritu	Alejandro Gonz√°lez I√±√°rritu
 6954	denys_arcand	Denys Arcand
 6955	fernando_meirelles	Fernando Meirelles
 6956	chinyen_yee	Chin-yen Yee
@@ -6558,7 +6558,7 @@ movieID	directorID	directorName
 6979	john_badham	John Badham
 6980	henry_koster	Henry Koster
 6981	kaj_munk	Kaj Munk
-6982	rene_clement	RenÈ ClÈment
+6982	rene_clement	Ren√© Cl√©ment
 6983	_1264352	Susanna White
 6984	ralph_thomas	Ralph Thomas
 6985	carl_theodor_dreyer	Carl Theodor Dreyer
@@ -6612,8 +6612,8 @@ movieID	directorID	directorName
 7034	lukas_moodysson	Lukas Moodysson
 7035	walter_hill	Walter Hill
 7036	rod_daniel	Rod Daniel
-7037	pedro_almodovar	Pedro AlmodÛvar
-7038	1066196-rodrigo_garcia	Rodrigo GarcÌa
+7037	pedro_almodovar	Pedro Almod√≥var
+7038	1066196-rodrigo_garcia	Rodrigo Garc√≠a
 7039	michael_apted	Michael Apted
 7040	william_friedkin	William Friedkin
 7041	george_gallo	George Gallo
@@ -6687,7 +6687,7 @@ movieID	directorID	directorName
 7110	_0411030	Teruo Ishii
 7111	david_lean	David Lean
 7112	paul_haggis	Paul Haggis
-7113	nicolas_echevarria	Nicol·s EchevarrÌa
+7113	nicolas_echevarria	Nicol√°s Echevarr√≠a
 7114	phillip_noyce	Phillip Noyce
 7115	dario_argento	Dario Argento
 7116	henrigeorges_clouzot	Henri-Georges Clouzot
@@ -6709,8 +6709,8 @@ movieID	directorID	directorName
 7132	sam_wood	Sam Wood
 7133	charles_band	Charles Band
 7134	lars_von_trier	Lars von Trier
-7135	francois_truffaut	FranÁois Truffaut
-7136	francois_truffaut	FranÁois Truffaut
+7135	francois_truffaut	Fran√ßois Truffaut
+7136	francois_truffaut	Fran√ßois Truffaut
 7137	1150240-wayne_kramer	Wayne Kramer
 7138	pablo_trapero	Pablo Trapero
 7139	jim_sheridan	Jim Sheridan
@@ -6801,7 +6801,7 @@ movieID	directorID	directorName
 7226	bob_rafelson	Bob Rafelson
 7227	ida_lupino	Ida Lupino
 7228	ralph_bakshi	Ralph Bakshi
-7229	ramon_menendez	RamÛn MenÈndez
+7229	ramon_menendez	Ram√≥n Men√©ndez
 7230	phil_karlson	Phil Karlson
 7231	james_neilson	James Neilson
 7232	james_ivory	James Ivory
@@ -6816,7 +6816,7 @@ movieID	directorID	directorName
 7242	abel_ferrara	Abel Ferrara
 7243	dw_griffith	D.W. Griffith
 7244	coleman_francis	Coleman Francis
-7245	alf-sjoberg	Alf Sjˆberg
+7245	alf-sjoberg	Alf Sj√∂berg
 7247	ken_hughes	Ken Hughes
 7248	chatrichalerm_yukoi	Chatrichalerm Yukoi
 7249	arthur_hiller	Arthur Hiller
@@ -6866,7 +6866,7 @@ movieID	directorID	directorName
 7295	lucas_belvaux	Lucas Belvaux
 7297	bent_hamer	Bent Hamer
 7298	manuel_boursinhac	Manuel Boursinhac
-7299	francois_dupeyron	FranÁois Dupeyron
+7299	francois_dupeyron	Fran√ßois Dupeyron
 7300	richard_c_sarafian	Richard C. Sarafian
 7301	robert_bresson	Robert Bresson
 7302	raoul_walsh	Raoul Walsh
@@ -6899,7 +6899,7 @@ movieID	directorID	directorName
 7329	edward_dmytryk	Edward Dmytryk
 7330	stuart_heisler	Stuart Heisler
 7331	ingmar_bergman	Ingmar Bergman
-7332	felix_enriquez_alcala	FÈlix EnrÌquez Alcal·
+7332	felix_enriquez_alcala	F√©lix Enr√≠quez Alcal√°
 7333	henrigeorges_clouzot	Henri-Georges Clouzot
 7334	lewis_milestone	Lewis Milestone
 7335	samuel_fuller	Samuel Fuller
@@ -6930,7 +6930,7 @@ movieID	directorID	directorName
 7361	michel_gondry	Michel Gondry
 7362	dj_caruso	D.J. Caruso
 7364	john_crowley	John Crowley
-7365	dagur_kari	Dagur K·ri
+7365	dagur_kari	Dagur K√°ri
 7366	1030366-kevin_smith	Kevin Smith
 7367	joel_coen	Joel Coen
 7368	ernest_r_dickerson	Ernest R. Dickerson
@@ -7030,7 +7030,7 @@ movieID	directorID	directorName
 7560	sidney_lumet	Sidney Lumet
 7561	bernard_rose	Bernard Rose
 7562	jean_kounen	Jean Kounen
-7563	jeroen_krabbe	Jeroen KrabbÈ
+7563	jeroen_krabbe	Jeroen Krabb√©
 7564	masaki_kobayashi	Masaki Kobayashi
 7565	arthur_hilton	Arthur Hilton
 7566	michael_apted	Michael Apted
@@ -7116,7 +7116,7 @@ movieID	directorID	directorName
 7757	don_chaffey	Don Chaffey
 7758	alain_resnais	Alain Resnais
 7759	_0576913	Michael Meinhardt
-7761	francois_truffaut	FranÁois Truffaut
+7761	francois_truffaut	Fran√ßois Truffaut
 7762	john_irvin	John Irvin
 7763	tom_tykwer	Tom Tykwer
 7764	abel_ferrara	Abel Ferrara
@@ -7146,7 +7146,7 @@ movieID	directorID	directorName
 7809	_0754328	Olli Saarela
 7810	ken_klein	Ken Klein
 7811	janet_greek	Janet Greek
-7812	jesus_salvador_trevino	Jes˙s Salvador TreviÒo
+7812	jesus_salvador_trevino	Jes√∫s Salvador Trevi√±o
 7813	john_a_alonzo	John A. Alonzo
 7814	sergei_bondarchuk	Sergei Bondarchuk
 7815	john_gatins	John Gatins
@@ -7301,7 +7301,7 @@ movieID	directorID	directorName
 8118	aaron_norris	Aaron Norris
 8119	tamra_davis	Tamra Davis
 8120	george_gallo	George Gallo
-8121	jean_francois_pouliot	Jean-FranÁois Pouliot
+8121	jean_francois_pouliot	Jean-Fran√ßois Pouliot
 8122	gigi_gaston	Gigi Gaston
 8123	stephen_frears	Stephen Frears
 8124	david_wagreich	David Wagreich
@@ -7321,7 +7321,7 @@ movieID	directorID	directorName
 8139	jeff_gillen	Jeff Gillen
 8140	charles_frend	Charles Frend
 8142	robert_diaz_leroy	Robert Diaz Leroy
-8143	max-ophuls	Max Oph¸ls
+8143	max-ophuls	Max Oph√ºls
 8147	tim_burton	Tim Burton
 8148	john_korty	John Korty
 8149	george_pal	George Pal
@@ -7360,7 +7360,7 @@ movieID	directorID	directorName
 8235	fred_c_newmeyer	Fred C. Newmeyer
 8236	fritz_lang	Fritz Lang
 8238	alan_arkin	Alan Arkin
-8239	luis_bunuel	Luis BuÒuel
+8239	luis_bunuel	Luis Bu√±uel
 8240	gregg_araki	Gregg Araki
 8241	tom_mcgrath	Tom McGrath
 8252	francis_ford_coppola	Francis Ford Coppola
@@ -7410,7 +7410,7 @@ movieID	directorID	directorName
 8365	roger_michell	Roger Michell
 8366	brian_dannelly	Brian Dannelly
 8367	michael_haneke	Michael Haneke
-8368	_0190859	Alfonso CuarÛn
+8368	_0190859	Alfonso Cuar√≥n
 8369	renny_harlin	Renny Harlin
 8370	takeshi_kitano	Takeshi Kitano
 8371	david_twohy	David Twohy
@@ -7419,7 +7419,7 @@ movieID	directorID	directorName
 8374	kiyoshi_kurosawa	Kiyoshi Kurosawa
 8375	1061981-bill_clinton	Bill Clinton
 8376	jared_hess	Jared Hess
-8377	roland_joffe	Roland JoffÈ
+8377	roland_joffe	Roland Joff√©
 8378	geoffrey_sax	Geoffrey Sax
 8379	peter_yates	Peter Yates
 8380	darrell_roodt	Darrell Roodt
@@ -7445,7 +7445,7 @@ movieID	directorID	directorName
 8405	ingmar_bergman	Ingmar Bergman
 8407	martin_ritt	Martin Ritt
 8410	lewis_allen	Lewis Allen
-8411	genevieve_jolliffe	GeneviËve Jolliffe
+8411	genevieve_jolliffe	Genevi√®ve Jolliffe
 8421	alex_de_la_iglesia	Alex de la Iglesia
 8422	sam_wood	Sam Wood
 8423	ja_howe	J.A. Howe
@@ -7556,7 +7556,7 @@ movieID	directorID	directorName
 8602	milcho_manchevski	Milcho Manchevski
 8603	heiner_carow	Heiner Carow
 8604	tim_story	Tim Story
-8605	gerard_krawczyk	GÈrard Krawczyk
+8605	gerard_krawczyk	G√©rard Krawczyk
 8606	robert_frank	Robert Frank
 8607	satoshi_kon	Satoshi Kon
 8608	claude_chabrol	Claude Chabrol
@@ -7571,7 +7571,7 @@ movieID	directorID	directorName
 8617	daniel_mann	Daniel Mann
 8618	nicholas_ray	Nicholas Ray
 8619	nancy_meckler	Nancy Meckler
-8620	luis_bunuel	Luis BuÒuel
+8620	luis_bunuel	Luis Bu√±uel
 8621	bernard_rose	Bernard Rose
 8622	1055159-michael_moore	Michael Moore
 8623	fred_schepisi	Fred Schepisi
@@ -7628,7 +7628,7 @@ movieID	directorID	directorName
 8677	ford_beebe	Ford Beebe
 8678	paul_wendkos	Paul Wendkos
 8679	michael_cimino	Michael Cimino
-8680	agustin_villaronga	AgustÌ Villaronga
+8680	agustin_villaronga	Agust√≠ Villaronga
 8681	robert_bresson	Robert Bresson
 8682	james_clavell	James Clavell
 8683	george_mccowan	George McCowan
@@ -7644,13 +7644,13 @@ movieID	directorID	directorName
 8694	1028179-william_a_seiter	William A. Seiter
 8695	irving_reis	Irving Reis
 8696	clint_eastwood	Clint Eastwood
-8697	antonio_hernandez	Antonio Hern·ndez
+8697	antonio_hernandez	Antonio Hern√°ndez
 8698	paul_schrader	Paul Schrader
 8699	reggie-rock-bythewood	Reggie Rock Bythewood
 8700	delmer_daves	Delmer Daves
 8701	david-price	David Price
 8702	nicholas_kazan	Nicholas Kazan
-8703	alex_olle	¡lex OllÈ
+8703	alex_olle	√Ålex Oll√©
 8704	martin_stellman	Martin Stellman
 8705	leonard_nimoy	Leonard Nimoy
 8706	bill_paxton	Bill Paxton
@@ -7674,7 +7674,7 @@ movieID	directorID	directorName
 8726	theodore_j_flicker	Theodore J. Flicker
 8727	john_schlesinger	John Schlesinger
 8728	freddie_francis	Freddie Francis
-8729	volker_schloendorff	Volker Schlˆndorff
+8729	volker_schloendorff	Volker Schl√∂ndorff
 8730	david_l_cunningham	David L. Cunningham
 8731	baz_luhrmann	Baz Luhrmann
 8732	peter_greenaway	Peter Greenaway
@@ -7728,7 +7728,7 @@ movieID	directorID	directorName
 8783	m_night_shyamalan	M. Night Shyamalan
 8784	zach_braff	Zach Braff
 8785	yasujiro_ozu	Yasujiro Ozu
-8786	_0138893	Marcel CarnÈ
+8786	_0138893	Marcel Carn√©
 8787	david_lane	David Lane
 8788	david_lane	David Lane
 8789	sydney_pollack	Sydney Pollack
@@ -7739,7 +7739,7 @@ movieID	directorID	directorName
 8794	nikita_mikhalkov	Nikita Mikhalkov
 8795	sung_su_kim	Sung-su Kim
 8796	richard_lester	Richard Lester
-8797	volker_schloendorff	Volker Schlˆndorff
+8797	volker_schloendorff	Volker Schl√∂ndorff
 8798	michael_mann	Michael Mann
 8799	nick_hurran	Nick Hurran
 8800	michael_winterbottom	Michael Winterbottom
@@ -7873,7 +7873,7 @@ movieID	directorID	directorName
 8939	omar_naim	Omar Naim
 8941	mick_garris	Mick Garris
 8942	james_redford	James Redford
-8943	istvan_szabo	Istv·n SzabÛ
+8943	istvan_szabo	Istv√°n Szab√≥
 8944	eric_small	Eric Small
 8945	alain_cavalier	Alain Cavalier
 8946	mike_mitchell	Mike Mitchell
@@ -7901,9 +7901,9 @@ movieID	directorID	directorName
 8970	marc_forster	Marc Forster
 8971	yash_chopra	Yash Chopra
 8972	jon_turteltaub	Jon Turteltaub
-8973	pedro_almodovar	Pedro AlmodÛvar
+8973	pedro_almodovar	Pedro Almod√≥var
 8974	sherm_cohen	Sherm Cohen
-8976	michele-bernier	MichËle Bernier
+8976	michele-bernier	Mich√®le Bernier
 8977	oliver_stone	Oliver Stone
 8978	joe_roth	Joe Roth
 8979	1069974-robert_stone	Robert Stone
@@ -7960,9 +7960,9 @@ movieID	directorID	directorName
 25764	edward_m_sedgwick	Edward M. Sedgwick
 25766	mary_lambert	Mary Lambert
 25769	charles_reisner	Charles Reisner
-25771	luis_bunuel	Luis BuÒuel
+25771	luis_bunuel	Luis Bu√±uel
 25773	mervyn_leroy	Mervyn LeRoy
-25774	luis_bunuel	Luis BuÒuel
+25774	luis_bunuel	Luis Bu√±uel
 25777	norman_z_mcleod	Norman Z. McLeod
 25783	vincent_sherman	Vincent Sherman
 25788	brian_de_palma	Brian DePalma
@@ -8006,7 +8006,7 @@ movieID	directorID	directorName
 25908	michael_curtiz	Michael Curtiz
 25914	sergei_eisenstein	Sergei M. Eisenstein
 25916	john_ford	John Ford
-25923	alfonso_cuaron	Alfonso CuarÛn
+25923	alfonso_cuaron	Alfonso Cuar√≥n
 25924	jean_negulesco	Jean Negulesco
 25927	1181454-bryan_bertino	Bryan Bertino
 25929	edmund_goulding	Edmund Goulding
@@ -8028,7 +8028,7 @@ movieID	directorID	directorName
 25960	jeanpierre_melville	Jean-Pierre Melville
 25961	henry_king	Henry King
 25962	andrew_marton	Andrew Marton
-25963	luis_bunuel	Luis BuÒuel
+25963	luis_bunuel	Luis Bu√±uel
 25964	akira_kurosawa	Akira Kurosawa
 25971	brian_de_palma	Brian DePalma
 25975	kenji_mizoguchi	Kenji Mizoguchi
@@ -8066,7 +8066,7 @@ movieID	directorID	directorName
 26116	robert_aldrich	Robert Aldrich
 26117	oliver_stone	Oliver Stone
 26119	samuel_fuller	Samuel Fuller
-26122	kaneto_shindo	Kaneto ShindÙ
+26122	kaneto_shindo	Kaneto Shind√¥
 26123	gordon_douglas	Gordon Douglas
 26124	byron_haskin	Byron Haskin
 26128	j_lee_thompson	J. Lee Thompson
@@ -8084,10 +8084,10 @@ movieID	directorID	directorName
 26151	robert_bresson	Robert Bresson
 26152	leslie_h_martinson	Leslie H. Martinson
 26155	basil_dearden	Basil Dearden
-26158	jiri_menzel	JirÌ Menzel
+26158	jiri_menzel	Jir√≠ Menzel
 26159	seijun_suzuki	Seijun Suzuki
 26163	da_pennebaker	D.A. Pennebaker
-26170	francois_truffaut	FranÁois Truffaut
+26170	francois_truffaut	Fran√ßois Truffaut
 26171	jacques_tati	Jacques Tati
 26172	george_armitage	George Armitage
 26174	michael_catonjones	Michael Caton-Jones
@@ -8130,7 +8130,7 @@ movieID	directorID	directorName
 26303	bob_dolman	Bob Dolman
 26306	douglas_hickox	Douglas Hickox
 26313	robert_altman	Robert Altman
-26318	luis_bunuel	Luis BuÒuel
+26318	luis_bunuel	Luis Bu√±uel
 26323	ken-shapiro	Ken Shapiro
 26326	alejandro_jodorowsky	Alejandro Jodorowsky
 26336	gene_wilder	Gene Wilder
@@ -8139,7 +8139,7 @@ movieID	directorID	directorName
 26349	arthur_penn	Arthur Penn
 26350	antonioni	Michelangelo Antonioni
 26359	bernardo_bertolucci	Bernardo Bertolucci
-26360	francois_truffaut	FranÁois Truffaut
+26360	francois_truffaut	Fran√ßois Truffaut
 26364	frank_d_gilroy	Frank D. Gilroy
 26366	barbara_kopple	Barbara Kopple
 26371	arthur_penn	Arthur Penn
@@ -8178,7 +8178,7 @@ movieID	directorID	directorName
 26513	stewart_raffill	Stewart Raffill
 26521	richard_benjamin	Richard Benjamin
 26524	robert_epstein	Robert Epstein
-26527	pedro_almodovar	Pedro AlmodÛvar
+26527	pedro_almodovar	Pedro Almod√≥var
 26544	michael_dinner	Michael Dinner
 26547	jackie_chan	Jackie Chan
 26550	paul_schrader	Paul Schrader
@@ -8193,7 +8193,7 @@ movieID	directorID	directorName
 26577	evelyn_purcell	Evelyn Purcell
 26578	andrei_tarkovsky	Andrei Tarkovsky
 26585	john_woo	John Woo
-26599	pedro_almodovar	Pedro AlmodÛvar
+26599	pedro_almodovar	Pedro Almod√≥var
 26603	1040928-john_carpenter	John Carpenter
 26606	ching_siutung	Siu-Tung Ching
 26614	doug_liman	Doug Liman
@@ -8221,7 +8221,7 @@ movieID	directorID	directorName
 26729	fax_bahr	Fax Bahr
 26734	gerd_oswald	Gerd Oswald
 26743	isao_takahata	Isao Takahata
-26744	162659443	Lasse Hallstrˆm
+26744	162659443	Lasse Hallstr√∂m
 26745	norman_jewison	Norman Jewison
 26746	john-flynn	John Flynn
 26750	simon_wincer	Simon Wincer
@@ -8254,7 +8254,7 @@ movieID	directorID	directorName
 26903	yoshifumi_kondo	Yoshifumi Kondo
 26915	lloyd_kaufman	Lloyd Kaufman
 26934	lik_chi_lee	Lik-Chi Lee
-26939	aki_kaurismaeki	Aki Kaurism‰ki
+26939	aki_kaurismaeki	Aki Kaurism√§ki
 26950	lloyd_kaufman	Lloyd Kaufman
 26965	ekachai_uekrongtham	Ekachai Uekrongtham
 26974	harmony_korine	Harmony Korine
@@ -8269,7 +8269,7 @@ movieID	directorID	directorName
 27109	toshiya_fujita	Toshiya Fujita
 27114	joe_chappelle	Joe Chappelle
 27186	michel-ocelot	Michel Ocelot
-27193	gerard_krawczyk	GÈrard Krawczyk
+27193	gerard_krawczyk	G√©rard Krawczyk
 27255	abbas_kiarostami	Abbas Kiarostami
 27266	karwai-wong	Kar Wai Wong
 27271	nagisa_oshima	Nagisa Oshima
@@ -8288,7 +8288,7 @@ movieID	directorID	directorName
 27410	adam_marcus	Adam Marcus
 27416	josef_fares	Josef Fares
 27432	khalo_matabane	Khalo Matabane
-27434	jaume_balaguero	Jaume BalaguerÛ
+27434	jaume_balaguero	Jaume Balaguer√≥
 27436	harry_bromley_davenport	Harry Bromley Davenport
 27450	jan_kounen	Jan Kounen
 27456	george_butler	George Butler
@@ -8311,7 +8311,7 @@ movieID	directorID	directorName
 27618	peter_hyams	Peter Hyams
 27620	alain_corneau	Alain Corneau
 27627	changdong_lee	Chang-dong Lee
-27636	leander_haussmann	Leander Hauﬂmann
+27636	leander_haussmann	Leander Hau√ümann
 27644	gabriele_muccino	Gabriele Muccino
 27648	stephen_fry	Stephen Fry
 27660	1064812-andy_jones	Andy Jones
@@ -8320,7 +8320,7 @@ movieID	directorID	directorName
 27679	zhuangzhuang_tian	Zhuangzhuang Tian
 27685	damon_santostefano	Damon Santostefano
 27689	olivier_dahan	Olivier Dahan
-27700	mikael_hafstrom	Mikael HÂfstrom
+27700	mikael_hafstrom	Mikael H√•fstrom
 27706	brad_silberling	Brad Silberling
 27716	anders_thomas_jensen	Anders Thomas Jensen
 27721	jeanpierre_jeunet	Jean-Pierre Jeunet
@@ -8338,7 +8338,7 @@ movieID	directorID	directorName
 27768	patrice_leconte	Patrice Leconte
 27772	1168219-takashi_shimizu	Takashi Shimizu
 27773	chan_wook_park	Chan Wook Park
-27776	cedric_kahn	CÈdric Kahn
+27776	cedric_kahn	C√©dric Kahn
 27778	grant-harvey	Grant Harvey
 27783	daniel_burman	Daniel Burman
 27788	john_maybury	John Maybury
@@ -8346,7 +8346,7 @@ movieID	directorID	directorName
 27792	guy_maddin	Guy Maddin
 27797	jorge_furtado	Jorge Furtado
 27801	prachya_pinkaew	Prachya Pinkaew
-27803	alejandro_amenabar	Alejandro Amen·bar
+27803	alejandro_amenabar	Alejandro Amen√°bar
 27808	james_l_brooks	James L. Brooks
 27812	bob_smeaton	Bob Smeaton
 27815	christophe_barratier	Christophe Barratier
@@ -8455,7 +8455,7 @@ movieID	directorID	directorName
 31160	charles_barton	Charles Barton
 31162	stephen_hopkins	Stephen Hopkins
 31184	shinji_aramaki	Shinji Aramaki
-31188	luis_bunuel	Luis BuÒuel
+31188	luis_bunuel	Luis Bu√±uel
 31193	john-lounsbery	John Lounsbery
 31221	rob_bowman	Rob Bowman
 31223	frederik_du_chau	Frederik Du Chau
@@ -8468,14 +8468,14 @@ movieID	directorID	directorName
 31270	david_cronenberg	David Cronenberg
 31309	luchino_visconti	Luchino Visconti
 31347	preston_sturges	Preston Sturges
-31349	rene_clair	RenÈ Clair
+31349	rene_clair	Ren√© Clair
 31359	ousmane_sembene	Ousmane Sembene
 31362	ash	Ash
 31364	joonho_bong	Joon-ho Bong
 31367	adam-rifkin	Adam Rifkin
 31408	marco-kreuzpaintner	Marco Kreuzpaintner
 31410	oliver_hirschbiegel	Oliver Hirschbiegel
-31420	jean_francois_richet	Jean-FranÁois Richet
+31420	jean_francois_richet	Jean-Fran√ßois Richet
 31422	brian_levant	Brian Levant
 31424	uwe_boll	Uwe Boll
 31427	john_polson	John Polson
@@ -8506,7 +8506,7 @@ movieID	directorID	directorName
 31613	bob_rafelson	Bob Rafelson
 31617	anthony_mann	Anthony Mann
 31658	hayao_miyazaki	Hayao Miyazaki
-31660	katsuhiro_otomo	Katsuhiro ‘tomo
+31660	katsuhiro_otomo	Katsuhiro √îtomo
 31682	andrew_horn	Andrew Horn
 31685	andy_tennant	Andy Tennant
 31687	frank-nissen	Frank Nissen
@@ -8537,8 +8537,8 @@ movieID	directorID	directorName
 31930	jeanluc_godard	Jean-Luc Godard
 31934	shekhar_kapur	Shekhar Kapur
 31950	jacques_tourneur	Jacques Tourneur
-31952	nimrd-antal	NimrÛd Antal
-31956	francois_ozon	FranÁois Ozon
+31952	nimrd-antal	Nimr√≥d Antal
+31956	francois_ozon	Fran√ßois Ozon
 31973	roberto_rossellini	Roberto Rossellini
 31998	lukas_moodysson	Lukas Moodysson
 32002	al_corley	Al Corley
@@ -8582,7 +8582,7 @@ movieID	directorID	directorName
 32179	louis_malle	Louis Malle
 32211	bo_arne_vibenius	Bo Arne Vibenius
 32213	ernie_barbarash	Ernie Barbarash
-32234	istvan_szabo	Istv·n SzabÛ
+32234	istvan_szabo	Istv√°n Szab√≥
 32239	junhwan_jeong	Jun-hwan Jeong
 32261	mervyn_leroy	Mervyn LeRoy
 32285	john_irvin	John Irvin
@@ -8599,7 +8599,7 @@ movieID	directorID	directorName
 32325	john_schlesinger	John Schlesinger
 32329	sylvester_stallone	Sylvester Stallone
 32333	agust_guomundsson	Agust Guomundsson
-32335	_0686304	Marcelo PiÒeyro
+32335	_0686304	Marcelo Pi√±eyro
 32342	michael_schultz	Michael Schultz
 32345	john_ford	John Ford
 32347	howard_hawks	Howard Hawks
@@ -8609,24 +8609,24 @@ movieID	directorID	directorName
 32361	howard_hawks	Howard Hawks
 32369	elia_kazan	Elia Kazan
 32371	henry_hathaway	Henry Hathaway
-32375	volker_schloendorff	Volker Schlˆndorff
+32375	volker_schloendorff	Volker Schl√∂ndorff
 32381	vincente_minnelli	Vincente Minnelli
 32383	francis_ford_coppola	Francis Ford Coppola
 32385	tobe_hooper	Tobe Hooper
 32387	kihachi_okamoto	Kihachi Okamoto
 32389	arturo_ripstein	Arturo Ripstein
 32392	alex_de_la_iglesia	Alex de la Iglesia
-32395	inoshiro-honda	IshirÙ Honda
+32395	inoshiro-honda	Ishir√¥ Honda
 32444	mark_dornford_may	Mark Dornford-May
 32456	isao_takahata	Isao Takahata
 32460	thomas_jahn	Thomas Jahn
 32469	neil_jordan	Neil Jordan
-32525	max-ophuls	Max Oph¸ls
+32525	max-ophuls	Max Oph√ºls
 32582	judy_irving	Judy Irving
 32584	rebecca_miller	Rebecca Miller
 32587	robert_rodriguez	Robert Rodriguez
 32589	bille_woodruff	Bille Woodruff
-32591	agnes_jaoui	AgnËs Jaoui
+32591	agnes_jaoui	Agn√®s Jaoui
 32593	dana_brown	Dana Brown
 32596	breck_eisner	Breck Eisner
 32598	bobby_farrelly	Bobby Farrelly
@@ -8640,7 +8640,7 @@ movieID	directorID	directorName
 32632	james_william_guercio	James William Guercio
 32646	michael_apted	Michael Apted
 32649	ettore_scola	Ettore Scola
-32657	frederic_back	FrÈdÈric Back
+32657	frederic_back	Fr√©d√©ric Back
 32666	roderick_giles	Roderick Giles
 32668	michael_haussman	Michael Haussman
 32674	franklin_j_schaffner	Franklin J. Schaffner
@@ -8652,7 +8652,7 @@ movieID	directorID	directorName
 32792	antonioni	Michelangelo Antonioni
 32825	juliusz_machulski	Juliusz Machulski
 32844	mervyn_leroy	Mervyn LeRoy
-32853	_0649096	Marcel Oph¸ls
+32853	_0649096	Marcel Oph√ºls
 32862	howard_morris	Howard Morris
 32875	jacques_tati	Jacques Tati
 32882	charles_reisner	Charles Reisner
@@ -8760,7 +8760,7 @@ movieID	directorID	directorName
 34177	robert_wise	Robert Wise
 34185	lee_grant	Lee Grant
 34189	john_paragon	John Paragon
-34198	cedric_klapisch	CÈdric Klapisch
+34198	cedric_klapisch	C√©dric Klapisch
 34271	craig_brewer	Craig Brewer
 34292	1043889-richard_stanley	Richard Stanley
 34299	ed_harris	Ed Harris
@@ -8831,10 +8831,10 @@ movieID	directorID	directorName
 37382	nahala_johnson	Nahala Johnson
 37384	rob_mckittrick	Rob McKittrick
 37386	karyn_kusama	Karyn Kusama
-37475	162659443	Lasse Hallstrˆm
+37475	162659443	Lasse Hallstr√∂m
 37477	peyton_reed	Peyton Reed
 37545	werner_herzog	Werner Herzog
-37720	jaume_balaguero	Jaume BalaguerÛ
+37720	jaume_balaguero	Jaume Balaguer√≥
 37727	robert_schwentke	Robert Schwentke
 37729	tim_burton	Tim Burton
 37731	lexi_alexander	Lexi Alexander
@@ -8900,7 +8900,7 @@ movieID	directorID	directorName
 39703	rowan-woods	Rowan Woods
 39715	steve_rash	Steve Rash
 39869	lars_von_trier	Lars von Trier
-39886	1066196-rodrigo_garcia	Rodrigo GarcÌa
+39886	1066196-rodrigo_garcia	Rodrigo Garc√≠a
 39896	paris-barclay	Paris Barclay
 40010	1167746-fernando_eimbcke	Fernando Eimbcke
 40148	guy_ritchie	Guy Ritchie
@@ -8909,13 +8909,13 @@ movieID	directorID	directorName
 40339	mark_dindal	Mark Dindal
 40412	shane_meadows	Shane Meadows
 40414	christian_carion	Christian Carion
-40491	aki_kaurismaeki	Aki Kaurism‰ki
-40494	mika-kaurismaki	Mika Kaurism‰ki
+40491	aki_kaurismaeki	Aki Kaurism√§ki
+40494	mika-kaurismaki	Mika Kaurism√§ki
 40574	jim_sheridan	Jim Sheridan
 40581	roger_kumble	Roger Kumble
 40583	stephen_gaghan	Stephen Gaghan
-40586	aki_kaurismaeki	Aki Kaurism‰ki
-40614	mikael_hafstrom	Mikael HÂfstrom
+40586	aki_kaurismaeki	Aki Kaurism√§ki
+40614	mikael_hafstrom	Mikael H√•fstrom
 40629	joe_wright	Joe Wright
 40723	greg_mclean	Greg McLean
 40732	1145736-neil_marshall	Neil Marshall
@@ -8942,7 +8942,7 @@ movieID	directorID	directorName
 41025	mike_barker	Mike Barker
 41136	martin_scorsese	Martin Scorsese
 41285	woody_allen	Woody Allen
-41336	luis_bunuel	Luis BuÒuel
+41336	luis_bunuel	Luis Bu√±uel
 41411	fenton_bailey	Fenton Bailey
 41425	craig_lucas	Craig Lucas
 41527	hany-abuassad	Hany Abu-Assad
@@ -8956,7 +8956,7 @@ movieID	directorID	directorName
 41617	barbara_kopple	Barbara Kopple
 41627	masaki_kobayashi	Masaki Kobayashi
 41699	renny_bartlett	Renny Bartlett
-41716	pedro_almodovar	Pedro AlmodÛvar
+41716	pedro_almodovar	Pedro Almod√≥var
 41721	sarah-watt	Sarah Watt
 41769	petter_naess	Petter Naess
 41831	raoul_walsh	Raoul Walsh
@@ -8968,7 +8968,7 @@ movieID	directorID	directorName
 42009	adam_shankman	Adam Shankman
 42011	dean_parisot	Dean Parisot
 42013	gore_verbinski	Gore Verbinski
-42015	162659443	Lasse Hallstrˆm
+42015	162659443	Lasse Hallstr√∂m
 42018	stephen_frears	Stephen Frears
 42021	james_ivory	James Ivory
 42053	john_mallory_asher	John Mallory Asher
@@ -8998,7 +8998,7 @@ movieID	directorID	directorName
 43011	daniel_haller	Daniel Haller
 43333	deepa_mehta	Deepa Mehta Saltzman
 43376	marc_rothemund	Marc Rothemund
-43391	aleksi_makela	Aleksi M‰kel‰
+43391	aleksi_makela	Aleksi M√§kel√§
 43396	roger_donaldson	Roger Donaldson
 43419	espen_sandberg	Espen Sandberg
 43460	michael_winterbottom	Michael Winterbottom
@@ -9046,7 +9046,7 @@ movieID	directorID	directorName
 44199	spike_lee	Spike Lee
 44204	gavin-hood	Gavin Hood
 44225	770910609	Elizabeth Allen (II)
-44301	aki_kaurismaeki	Aki Kaurism‰ki
+44301	aki_kaurismaeki	Aki Kaurism√§ki
 44397	alexandre-aja	Alexandre Aja
 44399	brian_robbins	Brian Robbins
 44494	blake_edwards	Blake Edwards
@@ -9059,7 +9059,7 @@ movieID	directorID	directorName
 44653	robert_bresson	Robert Bresson
 44657	robert_bresson	Robert Bresson
 44665	ryan_thomas	Ryan Thomas
-44694	pedro_almodovar	Pedro AlmodÛvar
+44694	pedro_almodovar	Pedro Almod√≥var
 44709	doug_atchison	Doug Atchison
 44729	trent-cooper	Trent Cooper
 44731	william_brent_bell	William Brent Bell
@@ -9070,7 +9070,7 @@ movieID	directorID	directorName
 44815	chris_robinson_iv	Chris Robinson (IV)
 44828	james_gunn	James Gunn
 44840	dennis_dugan	Dennis Dugan
-44844	nnegest_likke	Nnegest LikkÈ
+44844	nnegest_likke	Nnegest Likk√©
 44849	christian_volckman	Christian Volckman
 44864	jaidev_chakravorty	Jaidev Chakravorty
 44889	andy_fickman	Andy Fickman
@@ -9140,9 +9140,9 @@ movieID	directorID	directorName
 46574	billy-kent	Billy Kent
 46578	1167865-jonathan_dayton	Jonathan Dayton
 46581	keith-fulton	Keith Fulton
-46653	rudolph_mate	Rudolph MatÈ
+46653	rudolph_mate	Rudolph Mat√©
 46664	carol_reed	Carol Reed
-46723	alejandro_gonzalez_inniaritu	Alejandro Gonz·lez IÒ·rritu
+46723	alejandro_gonzalez_inniaritu	Alejandro Gonz√°lez I√±√°rritu
 46772	paul_dinello	Paul Dinello
 46803	john_ford	John Ford
 46839	hsiaohsien_hou	Hsiao-hsien Hou
@@ -9205,7 +9205,7 @@ movieID	directorID	directorName
 47894	ken_loach	Ken Loach
 47907	lajos_koltai	Lajos Koltai
 47937	christopher_smith	Christopher Smith
-47940	francois_ozon	FranÁois Ozon
+47940	francois_ozon	Fran√ßois Ozon
 47950	allen_coulter	Allen Coulter
 47952	renny_harlin	Renny Harlin
 47956	andrew_dominik	Andrew Dominik
@@ -9224,7 +9224,7 @@ movieID	directorID	directorName
 48161	phil_joanou	Phil Joanou
 48198	robert_altman	Robert Altman
 48214	wim_wenders	Wim Wenders
-48231	gyoergy_palfi	Gyˆrgy P·lfi
+48231	gyoergy_palfi	Gy√∂rgy P√°lfi
 48262	eric-steel	Eric Steel
 48301	alexander_korda	Alexander Korda
 48304	mel_gibson	Mel Gibson
@@ -9259,7 +9259,7 @@ movieID	directorID	directorName
 48738	kevin_macdonald	Kevin Macdonald
 48741	david-leaf	David Leaf
 48744	john_cameron_mitchell	John Cameron Mitchell
-48774	alfonso_cuaron	Alfonso CuarÛn
+48774	alfonso_cuaron	Alfonso Cuar√≥n
 48780	christopher_nolan	Christopher Nolan
 48783	clint_eastwood	Clint Eastwood
 48791	michael_mayer_vi	Michael Mayer (VI)
@@ -9332,7 +9332,7 @@ movieID	directorID	directorName
 50160	chris_noonan	Chris Noonan
 50162	luc_besson	Luc Besson
 50189	joe_nussbaum	Joe Nussbaum
-50229	agnes_varda	AgnËs Varda
+50229	agnes_varda	Agn√®s Varda
 50253	henry_king	Henry King
 50259	kelly_reichardt	Kelly Reichardt
 50274	roger_michell	Roger Michell
@@ -9443,7 +9443,7 @@ movieID	directorID	directorName
 52591	bruce_beresford	Bruce Beresford
 52604	gregory_hoblit	Gregory Hoblit
 52606	jeanbaptiste-andrea	Jean-Baptiste Andrea
-52644	nimrd-antal	NimrÛd Antal
+52644	nimrd-antal	Nimr√≥d Antal
 52666	michael_haneke	Michael Haneke
 52668	jon_kasdan	Jon Kasdan
 52694	steve_bendelack	Steve Bendelack
@@ -9481,7 +9481,7 @@ movieID	directorID	directorName
 53322	steven_soderbergh	Steven Soderbergh
 53326	david_moreau	David Moreau
 53349	rolf_de_heer	Rolf de Heer
-53355	leander_haussmann	Leander Hauﬂmann
+53355	leander_haussmann	Leander Hau√ümann
 53435	eli_roth	Eli Roth
 53447	gus_van_sant	Gus Van Sant
 53450	tim_burton	Tim Burton
@@ -9501,14 +9501,14 @@ movieID	directorID	directorName
 53887	lindsay_anderson	Lindsay Anderson
 53894	1055159-michael_moore	Michael Moore
 53921	michael_winterbottom	Michael Winterbottom
-53953	mikael_hafstrom	Mikael HÂfstrom
+53953	mikael_hafstrom	Mikael H√•fstrom
 53956	sara_st_onge	Sara St. Onge
 53972	len_wiseman	Len Wiseman
 53974	ken_kwapis	Ken Kwapis
 53988	lajos_koltai	Lajos Koltai
 53993	tom_shadyac	Tom Shadyac
 53996	borja_manso	Borja Manso
-53999	roland_joffe	Roland JoffÈ
+53999	roland_joffe	Roland Joff√©
 54001	david_yates	David Yates
 54004	david_dobkin	David Dobkin
 54075	_0282425	Peter Flinth
@@ -9614,7 +9614,7 @@ movieID	directorID	directorName
 55444	anton_corbijn	Anton Corbijn
 55451	robin_swicord	Robin Swicord
 55492	larry_fessenden	Larry Fessenden
-55498	francois_girard	FranÁois Girard
+55498	francois_girard	Fran√ßois Girard
 55507	shekhar_kapur	Shekhar Kapur
 55517	jeff_garlin	Jeff Garlin
 55553	1178642-jonathan_king	Jonathan King
@@ -9625,7 +9625,7 @@ movieID	directorID	directorName
 55620	daniel_g_karslake	Daniel G. Karslake
 55668	christian-charles	Christian Charles
 55687	amir-bar-lev	Amir Bar-Lev
-55721	jose_padilha	JosÈ Padilha
+55721	jose_padilha	Jos√© Padilha
 55726	1185012-cao_hamburger	Cao Hamburger
 55729	mike_cahill	Mike Cahill
 55732	menno_meyjes	Menno Meyjes
@@ -9652,7 +9652,7 @@ movieID	directorID	directorName
 56015	phil_karlson	Phil Karlson
 56028	alison_eastwood	Alison Eastwood
 56030	1181054-ted_braun	Ted Braun
-56060	jiri_menzel	JirÌ Menzel
+56060	jiri_menzel	Jir√≠ Menzel
 56067	robert_n_bradbury	Robert N. Bradbury
 56141	1180692-julie_gavras	Julie Gavras
 56145	frank_darabont	Frank Darabont
@@ -9693,14 +9693,14 @@ movieID	directorID	directorName
 56885	denzel_washington	Denzel Washington
 56908	justin_theroux	Justin Theroux
 56915	alex_haworth	Alex Haworth
-56921	felix_enriquez_alcala	FÈlix EnrÌquez Alcal·
+56921	felix_enriquez_alcala	F√©lix Enr√≠quez Alcal√°
 56941	paul_o_beale	Paul O. Beale
 56945	lance_rivera	Lance Rivera
 56949	anne_fletcher	Anne Fletcher
 57147	woody_allen	Woody Allen
 57223	hyungrae_shim	Hyung-rae Shim
 57243	1182131-eran_kolirin	Eran Kolirin
-57274	jaume_balaguero	Jaume BalaguerÛ
+57274	jaume_balaguero	Jaume Balaguer√≥
 57326	uwe_boll	Uwe Boll
 57353	michael_radford	Michael Radford
 57368	matt_reeves	Matt Reeves
@@ -9847,7 +9847,7 @@ movieID	directorID	directorName
 59784	1180381-john_stevenson	John Stevenson
 59795	rob-vanalkemade	Rob VanAlkemade
 59810	jay-roach	Jay Roach
-59816	peter_schonau_fog	Peter Sch¯nau Fog
+59816	peter_schonau_fog	Peter Sch√∏nau Fog
 59832	otto_preminger	Otto Preminger
 59834	tom_gries	Tom Gries
 59900	dennis_dugan	Dennis Dugan
@@ -9901,7 +9901,7 @@ movieID	directorID	directorName
 60522	noboru_iguchi	Noboru Iguchi
 60524	kirsten_sheridan	Kirsten Sheridan
 60526	gillian_armstrong	Gillian Armstrong
-60530	celine-sciamma	CÈline Sciamma
+60530	celine-sciamma	C√©line Sciamma
 60566	ole_bornedal	Ole Bornedal
 60590	1122723-nicolas_klotz	Nicolas Klotz
 60618	andrew_black	Andrew Black
@@ -9971,12 +9971,12 @@ movieID	directorID	directorName
 61475	1191225-chris_eska	Chris Eska
 61628	yang_zhang	Yang Zhang
 61634	s_sylvan_simon	S. Sylvan Simon
-61646	daniel_sanchez_arevalo	Daniel S·nchez ArÈvalo
+61646	daniel_sanchez_arevalo	Daniel S√°nchez Ar√©valo
 61678	10000961-jody_hill	Jody Hill
 61697	jon_avnet	Jon Avnet
 61705	neil_labute	Neil LaBute
 61707	joe_mendez	Joe Mendez
-61724	aki_kaurismaeki	Aki Kaurism‰ki
+61724	aki_kaurismaeki	Aki Kaurism√§ki
 61729	david_koepp	David Koepp
 61742	emir_kusturica	Emir Kusturica
 61816	ulrich_seidl	Ulrich Seidl
