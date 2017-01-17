@@ -12,10 +12,10 @@ class Recommender(object):
         self.userID = None
         self.userRatings = None
         self.recommendation = None
+        self.usableRatings = None
         self.X = None
         self.newWidth = None
         self.newMovies = None
-        self.i = 0
 
 
     def parseMovieDB(self, movie_file, ratedmovies_file):
@@ -44,7 +44,7 @@ class Recommender(object):
             ln = line.strip().split('\t')
             userSet.add(ln[0])
         """
-        self.height = 2113 #len(userSet)  set the height of the rating matix
+        self.height = 2114 # 2113 #len(userSet)  set the height of the rating matix
         #for speed its hardcoded
 
         ratedmovies = open(ratedmovies_file, 'rt', encoding='utf-8')
@@ -55,18 +55,18 @@ class Recommender(object):
 
         ln = ratedmovies.readline().split('\t') #reade first line
         curentU = ln[0] #remember curent user
-        self.userRatings[0][self.movieDict[ln[1]]] = ln[2] #set first rating
+        self.userRatings[0, self.movieDict[ln[1]]] = ln[2] #set first rating
 
         j = 0
         for line in ratedmovies:
             ln = line.strip().split('\t')
             if ln[0] == curentU: #if the user is the same just save te rating for the movie
-                self.userRatings[j][self.movieDict[ln[1]]] = ln[2]
+                self.userRatings[j, self.movieDict[ln[1]]] = ln[2]
             else: #if its a new user
                 userID.append(curentU) #save the old
-                self.userRatings[j][self.movieDict[ln[1]]] = ln[2] #save rating
-                curentU = ln[0] #save new user
+                curentU = ln[0]  # save new user
                 j += 1
+                self.userRatings[j, self.movieDict[ln[1]]] = ln[2] #save rating
 
         userID.append(curentU) #save the last user
 
@@ -108,10 +108,10 @@ class Recommender(object):
         var2 = np.dot(i2,i2)
         return cov/(sqrt(var1)*sqrt(var2)+K)
 
-    def ItemBasedPredictionFit(self, K):
+    def ItemBasedPredictionFit(self, K, threshold):
         start = time.time()
         self.usableRatings = np.sum(~np.isnan(self.userRatings), axis=0) > 300 #get movies with atleast m ratings
-        self.X = self.userRatings[:,self.usableRatings] #save them
+        self.X = np.copy(self.userRatings[:, self.usableRatings]) #save them
 
         self.userAve = np.array([np.nanmean(self.X, axis=1)]) #calculate mean for every user
         self.userAve = self.userAve.T #transpose for subtracting
@@ -121,53 +121,47 @@ class Recommender(object):
 
         self.recommendation = np.zeros((self.newWidth,self.newWidth)) #crate ampty array
         for i1, i2 in combinations(range(self.newWidth), 2): #get all combinations of movies
-            s = self.similarityFun(self.X[:,i1], self.X[:,i2], K) #calculate similarity
+            s = self.similarityFun(self.X[:, i1], self.X[:, i2], K) #calculate similarity
+            if s < threshold: s = 0
             self.recommendation[i1, i2] = s #save it
             self.recommendation[i2, i1] = s
 
         print("Time to calculate similarity: {0:.2f}s".format(time.time() - start))
 
-    def ItemBasedRecommend(self, user=None, n=20, recSeen=True):
-        if user is not None:
-            self.ItemBasedRecommendUser(user, n, recSeen) #seperate user recomend
-        else:
-            self.ItemBasedRecommendBest(n) #from best similarity
-
-    def ItemBasedRecommendUser(self, user, n, recSeen):
+    def ItemBasedRecommendUser(self, user, n=20, recSeen=True):
         start = time.time()
         userIndex = np.where(self.userID == user)[0][0] #finde user index
-        userRatings = np.nan_to_num(self.userRatings[userIndex, :]) #transform unseen movies to 0 rating
-        maxRatings = userRatings >= np.sort(userRatings)[-n] #sort all ratings and get those with th higewst rating
-        aboveAverage = userRatings >= self.userAve[userIndex] #get those above avergae
-        usableMovies = self.usableRatings & maxRatings & aboveAverage #combine
-        movies = self.movieID[usableMovies] #highest rated movies form user
+        notRatedMovies = np.argwhere(np.isnan(self.X[userIndex, :])).ravel()
+        ratedMovies = ~np.isnan(self.X[userIndex, :])
+        userRatingValue = self.X[userIndex, ratedMovies]
 
-        similarMovies = defaultdict(int) #for saving similar movies and their similarity
-        for movieId in movies:
-            movieIndex = np.where(self.newMovies == movieId)[0][0] #get movie index
-            max = np.max(self.recommendation[movieIndex, :]) #get max similarity
-            similarMovieIndex = np.where(self.recommendation[movieIndex, :] == max)[0][0] #finde the index
-            similarMovie = self.newMovies[similarMovieIndex] #finde movie id
-            if similarMovies[similarMovie] < max: #save if not allredy
-                similarMovies[similarMovie] = max
+        moviesRecommend = np.zeros(self.newWidth)
+        for i in notRatedMovies:
+            similarity = self.recommendation[i, ratedMovies]
+            similaritySum = np.sum(similarity)
+            if similaritySum == 0:
+                rating = 0
+            else:
+                rating = np.dot(userRatingValue, similarity) / similaritySum
+            moviesRecommend[i] = self.userAve[userIndex] + rating
 
         print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
 
-        seenMovies = self.movieTitle[~np.isnan(self.userRatings[userIndex, :])] #get ids of seen movies
+        seenMovies = np.isnan(self.X[userIndex, :])
         result = []
-        for key, value in similarMovies.items():
-            if recSeen or key not in seenMovies:
-                result.append((self.movieTitle[self.movieDict[key]], value)) #save similar movies and similarity
+        for i in range(self.newWidth):
+            if recSeen or seenMovies[i]:
+                result.append((self.movieTitle[self.movieDict[self.newMovies[i]]], moviesRecommend[i]))
 
         result.sort(key=lambda tup: -tup[1]) #sort them
         if len(result) > n:
             for r in result[:n]:
-                print(r)
+                print("{} - {:.2f}".format(r[0], r[1]))
         else:
             for r in result:
-                print(r)
+                print("{} - {:.2f}".format(r[0], r[1]))
 
-    def ItemBasedRecommendBest(self, n):
+    def ItemBasedBest(self, n=20):
         start = time.time()
         result = []
         for i1, i2 in combinations(range(self.newWidth), 2):
@@ -182,3 +176,54 @@ class Recommender(object):
             i2 = self.newMovies[r[1]] #get index
             m2 = self.movieTitle[self.movieDict[i2]] #get title
             print((m1, m2, r[2]))
+
+    def UserBasedPredictionFit(self, K):
+        start = time.time()
+        self.usableRatings = np.sum(~np.isnan(self.userRatings), axis=1) > 500  # get users with atleast m ratings
+        self.X = self.userRatings[self.usableRatings, :]  # save them
+
+        self.userAve = np.array([np.nanmean(self.X, axis=1)]) #calculate mean for every user
+        self.userAve = self.userAve.T #transpose for subtracting
+        self.X = self.X - self.userAve #subtract mean of user from their ratings
+
+        self.newHeight = self.X.shape[0]  # save new width
+        self.newUser = self.userID[self.usableRatings]  # save reduced movieID table
+        self.recommendation = np.zeros((self.newHeight,self.newHeight)) #crate ampty array
+
+        for u1, u2 in combinations(range(self.newHeight), 2): #get all combinations of movies
+            s = self.similarityFun(self.X[u1, :], self.X[u2, :], K) #calculate similarity
+            self.recommendation[u1, u2] = s #save it
+            self.recommendation[u2, u1] = s
+
+        print("Time to calculate similarity: {0:.2f}s".format(time.time() - start))
+
+    def UserBasedRecommend(self, user=None, n=20, recSeen=True):
+        if user is not None:
+            self.UserBasedRecommendUser(user, n, recSeen) #seperate user recomend
+        else:
+            self.UserBasedRecommendBest(n) #from best similarity
+
+    def UserBasedRecommendUser(self, user, n, recSeen):
+        start = time.time()
+        newUserIndex = np.where(self.newUser == user)[0][0] #finde user index
+        maxSimilarUser = np.nanmax(self.recommendation[newUserIndex, :])
+        similarUsers = self.recommendation[newUserIndex, :]
+
+
+        print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
+
+
+
+    def UserBasedRecommendBest(self, n):
+        start = time.time()
+        result = []
+        for u1, u2 in combinations(range(self.newHeight), 2):
+            result.append((u1, u2, self.recommendation[u1, u2])) #save all similarities
+
+        result = sorted(result, key=lambda tup: -tup[2])[:n] #sort them an get the best
+        print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
+
+        for r in result: #print the best
+            u1 = self.newUser[r[0]] #get id
+            u2 = self.newUser[r[1]] #get id
+            print((u1, u2, r[2]))
