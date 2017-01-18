@@ -23,8 +23,11 @@ class Recommender(object):
 
         self.itemSimilarity = None
         self.userSimilarity = None
+        self.s1DifferenceNum = None
+        self.s1Difference = None
         self.itemBasedResults = None
         self.userBasedResults = None
+        self.s1BasedResults = None
 
 
     def parseMovieDB(self, movie_file, ratedmovies_file):
@@ -123,6 +126,14 @@ class Recommender(object):
         self.newUser = self.userID[self.usableUsers]  # save reduced userID table
         self.newMovies = self.movieID[self.usableMovies]  # save reduced movieID table
 
+########################################################################################################################
+#                                                                                                                      #
+#                                                                                                                      #
+#                              ITEM BASED PREDICTION                                                                   #
+#                                                                                                                      #
+#                                                                                                                      #
+########################################################################################################################
+
     def similarityFun(self, i1, i2, K):
         notNan = ~np.isnan(i1) & ~np.isnan(i2) #finde where both are numbers
         i1 = i1[notNan] #remember, for speed
@@ -165,13 +176,19 @@ class Recommender(object):
 
         print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
 
-        seenMovies = np.isnan(self.X[userIndex, :])
+        notSeenMovies = np.isnan(self.X[userIndex, :])
         self.itemBasedResults = []
         for i in range(self.newWidth):
-            if recSeen or seenMovies[i]:
-                self.itemBasedResults.append((self.newMovies[i], moviesRecommend[i]))
+            if recSeen:
+                if notSeenMovies[i]:
+                    self.itemBasedResults.append((self.newMovies[i], moviesRecommend[i]))
+                else:
+                    self.itemBasedResults.append((self.newMovies[i], self.X[userIndex, i]))
+            else:
+                if notSeenMovies[i]:
+                    self.itemBasedResults.append((self.newMovies[i], moviesRecommend[i]))
 
-    def ItemBasedRecommendUser(self, user, n=20, recSeen=True):
+    def ItemBasedRecommendUser(self, user, n=20, recSeen=False):
         self._ItemBasedRecommendUser(user, recSeen)
 
         self.itemBasedResults.sort(key=lambda tup: -tup[1]) #sort them
@@ -197,6 +214,14 @@ class Recommender(object):
             i2 = self.newMovies[r[1]] #get index
             m2 = self.movieTitle[self.movieDict[i2]] #get title
             print((m1, m2, r[2]))
+
+########################################################################################################################
+#                                                                                                                      #
+#                                                                                                                      #
+#                              USER BASED PREDICTION                                                                   #
+#                                                                                                                      #
+#                                                                                                                      #
+########################################################################################################################
 
     def UserBasedPredictionFit(self, K, threshold, users=500, items=0):
         start = time.time()
@@ -230,13 +255,19 @@ class Recommender(object):
 
         print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
 
-        seenMovies = np.isnan(self.X[userIndex, :])
+        notSeenMovies = np.isnan(self.X[userIndex, :])
         self.userBasedResults = []
         for i in range(self.newWidth):
-            if recSeen or seenMovies[i]:
-                self.userBasedResults.append((self.newMovies[i], moviesRecommend[i]))
+            if recSeen:
+                if notSeenMovies[i]:
+                    self.userBasedResults.append((self.newMovies[i], moviesRecommend[i]))
+                else:
+                    self.userBasedResults.append((self.newMovies[i], self.X[userIndex, i]))
+            else:
+                if notSeenMovies[i]:
+                    self.userBasedResults.append((self.newMovies[i], moviesRecommend[i]))
 
-    def UserBasedRecommendUser(self, user, n=20, recSeen=True):
+    def UserBasedRecommendUser(self, user, n=20, recSeen=False):
         if user not in self.newUser:
             print("User has not enough ratings!")
             return
@@ -264,3 +295,83 @@ class Recommender(object):
             u1 = self.newUser[r[0]] #get id
             u2 = self.newUser[r[1]] #get id
             print((u1, u2, r[2]))
+
+########################################################################################################################
+#                                                                                                                      #
+#                                                                                                                      #
+#                              SLOPE ONE PREDICTION                                                                    #
+#                                                                                                                      #
+#                                                                                                                      #
+########################################################################################################################
+
+    def differenceFunS1(self, i1, i2):
+        notNan = ~np.isnan(i1) & ~np.isnan(i2) #finde where both are numbers
+        itemSum = np.sum(i2[notNan] - i1[notNan])
+        numCommon = np.sum(notNan)
+        if numCommon == 0:
+            return 0, 0
+        else:
+            return itemSum/numCommon, numCommon
+
+    def SlopeOnePredictionFit(self, users=0, items=400):
+        start = time.time()
+
+        self.reduceDB(users, items)
+
+        self.s1DifferenceNum = np.zeros((self.newWidth,self.newWidth))
+        self.s1Difference = np.zeros((self.newWidth,self.newWidth)) #crate ampty array
+        for i1, i2 in combinations(range(self.newWidth), 2): #get all combinations of movies
+            d, n = self.differenceFunS1(self.X[i1, :], self.X[i2, :]) #calculate similarity
+            self.s1Difference[i1, i2] = d #save it
+            self.s1DifferenceNum[i1, i2] = n  # save it
+            self.s1Difference[i2, i1] = -d
+            self.s1DifferenceNum[i2, i1] = n  # save it
+
+        print("Time to calculate similarity: {0:.2f}s".format(time.time() - start))
+
+    def _SlopeOneRecommendUser(self, user, recSeen):
+        start = time.time()
+        userIndex = np.where(self.newUser == user)[0][0]  # finde user index
+        notRatedMovies = np.argwhere(np.isnan(self.X[userIndex, :])).ravel()
+        ratedMovies = ~np.isnan(self.X[userIndex, :])
+        userRatingValue = self.X[userIndex, ratedMovies]
+
+        moviesRecommend = np.zeros(self.newWidth)
+        for i in notRatedMovies:
+            difference = self.s1Difference[i, ratedMovies]
+            differenceNum = self.s1DifferenceNum[i, ratedMovies]
+            numSum = np.sum(differenceNum)
+            if numSum == 0:
+                rating = 0
+            else:
+                rating = np.sum((userRatingValue-difference)*differenceNum) / numSum
+            moviesRecommend[i] = self.userAve[userIndex] + rating
+
+        print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
+
+        notSeenMovies = np.isnan(self.X[userIndex, :])
+        self.s1BasedResults = []
+        for i in range(self.newWidth):
+            if recSeen:
+                if notSeenMovies[i]:
+                    self.s1BasedResults.append((self.newMovies[i], moviesRecommend[i]))
+                else:
+                    self.s1BasedResults.append((self.newMovies[i], self.X[userIndex, i]))
+            else:
+                if notSeenMovies[i]:
+                    self.s1BasedResults.append((self.newMovies[i], moviesRecommend[i]))
+
+    def SlopeOneRecommendUser(self, user, n=20, recSeen=False):
+        if user not in self.newUser:
+            print("User has not enough ratings!")
+            return
+
+        self._SlopeOneRecommendUser(user, recSeen)
+
+        self.s1BasedResults.sort(key=lambda tup: -tup[1]) #sort them
+        if len(self.s1BasedResults) > n:
+            for r in self.s1BasedResults[:n]:
+                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
+        else:
+            for r in self.s1BasedResults:
+                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
