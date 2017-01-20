@@ -1,7 +1,6 @@
 import numpy as np
 from math import sqrt
 from itertools import combinations
-from collections import defaultdict
 import time
 
 class Recommender(object):
@@ -87,30 +86,6 @@ class Recommender(object):
         self.movieTitle = np.array(movieTitle)
         print("Time to load data: {0:.2f}s".format(time.time() - start))
 
-    def averagePrediction(self, b, n=20, user=None):
-        start = time.time()
-        #recommends movies with best avrage ratings
-        ratingsSum = np.nansum(self.userRatings, axis=0) #add all ratings of movies
-        ratingsNum = np.sum(~np.isnan(self.userRatings), axis=0) #count the number of given ratings
-        globalAvg = np.sum(ratingsSum)/np.sum(ratingsNum) #calculate global avrage
-
-        nonzero = ratingsNum!=0 #finde all movies wich have atlest one rating
-        recommendation = np.zeros(self.width)
-        recommendation[nonzero] = (ratingsSum[nonzero] + b * globalAvg) / (ratingsNum[nonzero] + b) #calculate movie avrage
-        print("Time to calculate movie average: {0:.2f}s".format(time.time() - start))
-
-        dtype = [('title', np.dtype((str, 100))), ('rating', float)]  # define numpy data type
-        if user is not None: #check if user was given
-            userIndex = np.where(self.userID == user)[0][0] #finde user index
-            seenMovies = ~np.isnan(self.userRatings[userIndex, :]) #finde seen movies
-            rec = np.array(list(zip(self.movieTitle[seenMovies], recommendation[seenMovies])), dtype=dtype) #print average of those seen movies
-        else:
-            rec = np.array(list(zip(self.movieTitle, recommendation)), dtype=dtype)  # combine movie rating with title
-
-        rec = np.sort(rec, order='rating')[-n:][::-1] #sort, take last n, reverse
-        for r in rec:
-            print(r)
-
     def reduceDB(self, minUser, minItem):
         self.usableMovies = np.sum(~np.isnan(self.userRatings), axis=0) > minItem  # get movies with atleast m ratings
         tmp = self.userRatings[:, self.usableMovies]  # save them
@@ -125,6 +100,45 @@ class Recommender(object):
         self.newHeight = self.X.shape[0]  # save new height
         self.newUser = self.userID[self.usableUsers]  # save reduced userID table
         self.newMovies = self.movieID[self.usableMovies]  # save reduced movieID table
+
+    def printRecommendation(self, results, n):
+        results.sort(key=lambda tup: -tup[1])  # sort them
+        if len(results) > n:
+            for r in results[:n]:
+                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
+        else:
+            for r in results:
+                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
+
+
+########################################################################################################################
+#                                                                                                                      #
+#                                                                                                                      #
+#                              AVERAGE PREDICTION                                                                      #
+#                                                                                                                      #
+#                                                                                                                      #
+########################################################################################################################
+
+    def averagePrediction(self, b, n=20, user=None):
+        start = time.time()
+        # recommends movies with best avrage ratings
+        ratingsSum = np.nansum(self.userRatings, axis=0)  # add all ratings of movies
+        ratingsNum = np.sum(~np.isnan(self.userRatings), axis=0)  # count the number of given ratings
+        globalAvg = np.sum(ratingsSum) / np.sum(ratingsNum)  # calculate global avrage
+
+        nonzero = ratingsNum != 0  # finde all movies wich have atlest one rating
+        averageResults = np.zeros(self.width)
+        averageResults[nonzero] = (ratingsSum[nonzero] + b * globalAvg) / (
+        ratingsNum[nonzero] + b)  # calculate movie avrage
+        print("Time to calculate movie average: {0:.2f}s".format(time.time() - start))
+
+        if user is not None:  # check if user was given
+            userIndex = np.where(self.userID == user)[0][0]  # finde user index
+            seenMovies = ~np.isnan(self.userRatings[userIndex, :])  # finde seen movies
+            self.printRecommendation(list(zip(self.movieID[seenMovies], averageResults[seenMovies])), n)
+        else:
+            self.printRecommendation(list(zip(self.movieID, averageResults)), n)
+
 
 ########################################################################################################################
 #                                                                                                                      #
@@ -143,10 +157,11 @@ class Recommender(object):
         var2 = np.dot(i2,i2)
         return cov/(sqrt(var1)*sqrt(var2)+K)
 
-    def ItemBasedPredictionFit(self, K, threshold, users=0, items=300):
+    def ItemBasedPredictionFit(self, K, threshold, users=0, items=300, prepareDB=True):
         start = time.time()
 
-        self.reduceDB(users, items)
+        if prepareDB:
+            self.reduceDB(users, items)
 
         self.itemSimilarity = np.zeros((self.newWidth,self.newWidth)) #crate ampty array
         for i1, i2 in combinations(range(self.newWidth), 2): #get all combinations of movies
@@ -158,13 +173,12 @@ class Recommender(object):
         print("Time to calculate similarity: {0:.2f}s".format(time.time() - start))
 
     def _ItemBasedRecommendUser(self, user, recSeen):
-        start = time.time()
         userIndex = np.where(self.newUser == user)[0][0]  # finde user index
         notRatedMovies = np.argwhere(np.isnan(self.X[userIndex, :])).ravel()
         ratedMovies = ~np.isnan(self.X[userIndex, :])
         userRatingValue = self.X[userIndex, ratedMovies]
 
-        moviesRecommend = np.zeros(self.newWidth)
+        self.itemAllUserRatings = np.zeros(self.newWidth)
         for i in notRatedMovies:
             similarity = self.itemSimilarity[i, ratedMovies]
             similaritySum = np.sum(similarity)
@@ -172,41 +186,30 @@ class Recommender(object):
                 rating = 0
             else:
                 rating = np.dot(userRatingValue, similarity) / similaritySum
-            moviesRecommend[i] = self.userAve[userIndex] + rating
-
-        print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
+            self.itemAllUserRatings[i] = self.userAve[userIndex] + rating
 
         notSeenMovies = np.isnan(self.X[userIndex, :])
         self.itemBasedResults = []
         for i in range(self.newWidth):
             if recSeen:
                 if notSeenMovies[i]:
-                    self.itemBasedResults.append((self.newMovies[i], moviesRecommend[i]))
+                    self.itemBasedResults.append((self.newMovies[i], self.itemAllUserRatings[i]))
                 else:
                     self.itemBasedResults.append((self.newMovies[i], self.X[userIndex, i]))
             else:
                 if notSeenMovies[i]:
-                    self.itemBasedResults.append((self.newMovies[i], moviesRecommend[i]))
+                    self.itemBasedResults.append((self.newMovies[i], self.itemAllUserRatings[i]))
 
     def ItemBasedRecommendUser(self, user, n=20, recSeen=False):
         self._ItemBasedRecommendUser(user, recSeen)
-
-        self.itemBasedResults.sort(key=lambda tup: -tup[1]) #sort them
-        if len(self.itemBasedResults) > n:
-            for r in self.itemBasedResults[:n]:
-                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
-        else:
-            for r in self.itemBasedResults:
-                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
+        self.printRecommendation(self.itemBasedResults, n)
 
     def ItemBasedBest(self, n=20):
-        start = time.time()
         result = []
         for i1, i2 in combinations(range(self.newWidth), 2):
             result.append((i1, i2, self.itemSimilarity[i1, i2])) #save all similarities
 
         result = sorted(result, key=lambda tup: -tup[2])[:n] #sort them an get the best
-        print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
 
         for r in result: #print the best
             i1 = self.newMovies[r[0]] #get index
@@ -223,10 +226,11 @@ class Recommender(object):
 #                                                                                                                      #
 ########################################################################################################################
 
-    def UserBasedPredictionFit(self, K, threshold, users=500, items=0):
+    def UserBasedPredictionFit(self, K, threshold, users=500, items=0, prepareDB=True):
         start = time.time()
 
-        self.reduceDB(users, items)
+        if prepareDB:
+            self.reduceDB(users, items)
 
         self.userSimilarity = np.zeros((self.newHeight,self.newHeight)) #crate ampty array
         for u1, u2 in combinations(range(self.newHeight), 2): #get all combinations of movies
@@ -238,11 +242,10 @@ class Recommender(object):
         print("Time to calculate similarity: {0:.2f}s".format(time.time() - start))
 
     def _UserBasedRecommendUser(self, user, recSeen):
-        start = time.time()
         userIndex = np.where(self.newUser == user)[0][0]  # finde user index
         notRatedMovies = np.argwhere(np.isnan(self.X[userIndex, :])).ravel()
 
-        moviesRecommend = np.zeros(self.newWidth)
+        self.userAllUserRatings = np.zeros(self.newWidth)
         for i in notRatedMovies:
             ratedByUsers = ~np.isnan(self.X[:, i])
             similarity = self.userSimilarity[userIndex, ratedByUsers]
@@ -251,21 +254,19 @@ class Recommender(object):
                 rating = 0
             else:
                 rating = np.dot(self.X[ratedByUsers, i], similarity) / similaritySum
-            moviesRecommend[i] = self.userAve[userIndex] + rating
-
-        print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
+            self.userAllUserRatings[i] = self.userAve[userIndex] + rating
 
         notSeenMovies = np.isnan(self.X[userIndex, :])
         self.userBasedResults = []
         for i in range(self.newWidth):
             if recSeen:
                 if notSeenMovies[i]:
-                    self.userBasedResults.append((self.newMovies[i], moviesRecommend[i]))
+                    self.userBasedResults.append((self.newMovies[i], self.userAllUserRatings[i]))
                 else:
                     self.userBasedResults.append((self.newMovies[i], self.X[userIndex, i]))
             else:
                 if notSeenMovies[i]:
-                    self.userBasedResults.append((self.newMovies[i], moviesRecommend[i]))
+                    self.userBasedResults.append((self.newMovies[i], self.userAllUserRatings[i]))
 
     def UserBasedRecommendUser(self, user, n=20, recSeen=False):
         if user not in self.newUser:
@@ -273,23 +274,14 @@ class Recommender(object):
             return
 
         self._UserBasedRecommendUser(user, recSeen)
-
-        self.userBasedResults.sort(key=lambda tup: -tup[1]) #sort them
-        if len(self.userBasedResults) > n:
-            for r in self.userBasedResults[:n]:
-                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
-        else:
-            for r in self.userBasedResults:
-                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
+        self.printRecommendation(self.userBasedResults, n)
 
     def UserBasedBest(self, n):
-        start = time.time()
         result = []
         for u1, u2 in combinations(range(self.newHeight), 2):
             result.append((u1, u2, self.userSimilarity[u1, u2])) #save all similarities
 
         result = sorted(result, key=lambda tup: -tup[2])[:n] #sort them an get the best
-        print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
 
         for r in result: #print the best
             u1 = self.newUser[r[0]] #get id
@@ -313,10 +305,11 @@ class Recommender(object):
         else:
             return itemSum/numCommon, numCommon
 
-    def SlopeOnePredictionFit(self, users=0, items=400):
+    def SlopeOnePredictionFit(self, users=0, items=400, prepareDB=True):
         start = time.time()
 
-        self.reduceDB(users, items)
+        if prepareDB:
+            self.reduceDB(users, items)
 
         self.s1DifferenceNum = np.zeros((self.newWidth,self.newWidth))
         self.s1Difference = np.zeros((self.newWidth,self.newWidth)) #crate ampty array
@@ -330,13 +323,12 @@ class Recommender(object):
         print("Time to calculate similarity: {0:.2f}s".format(time.time() - start))
 
     def _SlopeOneRecommendUser(self, user, recSeen):
-        start = time.time()
         userIndex = np.where(self.newUser == user)[0][0]  # finde user index
         notRatedMovies = np.argwhere(np.isnan(self.X[userIndex, :])).ravel()
         ratedMovies = ~np.isnan(self.X[userIndex, :])
         userRatingValue = self.X[userIndex, ratedMovies]
 
-        moviesRecommend = np.zeros(self.newWidth)
+        self.s1AllUserRatings = np.zeros(self.newWidth)
         for i in notRatedMovies:
             difference = self.s1Difference[i, ratedMovies]
             differenceNum = self.s1DifferenceNum[i, ratedMovies]
@@ -345,33 +337,190 @@ class Recommender(object):
                 rating = 0
             else:
                 rating = np.sum((userRatingValue-difference)*differenceNum) / numSum
-            moviesRecommend[i] = self.userAve[userIndex] + rating
+            self.s1AllUserRatings[i] = self.userAve[userIndex] + rating
 
-        print("Time to finde similar movies: {0:.2f}s".format(time.time() - start))
 
         notSeenMovies = np.isnan(self.X[userIndex, :])
         self.s1BasedResults = []
         for i in range(self.newWidth):
             if recSeen:
                 if notSeenMovies[i]:
-                    self.s1BasedResults.append((self.newMovies[i], moviesRecommend[i]))
+                    self.s1BasedResults.append((self.newMovies[i], self.s1AllUserRatings[i]))
                 else:
                     self.s1BasedResults.append((self.newMovies[i], self.X[userIndex, i]))
             else:
                 if notSeenMovies[i]:
-                    self.s1BasedResults.append((self.newMovies[i], moviesRecommend[i]))
+                    self.s1BasedResults.append((self.newMovies[i], self.s1AllUserRatings[i]))
 
     def SlopeOneRecommendUser(self, user, n=20, recSeen=False):
-        if user not in self.newUser:
-            print("User has not enough ratings!")
-            return
-
         self._SlopeOneRecommendUser(user, recSeen)
+        self.printRecommendation(self.s1BasedResults, n)
 
-        self.s1BasedResults.sort(key=lambda tup: -tup[1]) #sort them
-        if len(self.s1BasedResults) > n:
-            for r in self.s1BasedResults[:n]:
-                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
-        else:
-            for r in self.s1BasedResults:
-                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
+
+########################################################################################################################
+#                                                                                                                      #
+#                                                                                                                      #
+#                              EVALUET                                                                                 #
+#                                                                                                                      #
+#                                                                                                                      #
+########################################################################################################################
+
+
+
+
+    def Evaluet(self, K, threshold):
+        self.reduceDB(100, 400)
+        testUserNum = int(self.newHeight*0.3)
+        testUsers = np.concatenate((np.zeros(self.newHeight-testUserNum, dtype=bool), np.ones(testUserNum, dtype=bool)))
+        np.random.shuffle(testUsers)
+        testItemNum = int(self.newWidth*0.5)
+        testItems = np.copy(self.X[testUsers, :])
+        testItemsRated = ~np.isnan(self.X[testUsers, :])
+        self.X[testUsers, :testItemNum] = np.nan
+        testItemsRated[:, testItemNum:] = False
+
+        RMSE = 0
+        MAE = 0
+        eNum = 0
+        precision = 0
+        recall = 0
+        tpNum = 0
+
+        self.ItemBasedPredictionFit(K, threshold, prepareDB=False)
+        userNum = 0
+        for u in np.argwhere(testUsers).ravel():
+            self._ItemBasedRecommendUser(self.newUser[u], recSeen=False)
+            testItemsRatedUser = testItemsRated[userNum, :]
+            calculatedRatings = self.itemAllUserRatings[testItemsRatedUser]
+            realRatings = testItems[userNum, testItemsRatedUser]
+            ratingDifference = (calculatedRatings - self.userAve[u]) - realRatings
+            relativeCalculatedR = calculatedRatings - self.userAve[u]
+            userNum += 1
+
+            if np.sum(testItemsRatedUser) != 0:
+                RMSE += sqrt(np.sum(ratingDifference * ratingDifference) / np.sum(testItemsRatedUser))
+                MAE += np.sum(np.abs(ratingDifference)) / np.sum(testItemsRatedUser)
+                eNum += 1
+
+            tAboveAvg = realRatings > 0
+            tBelowAvg = realRatings <= 0
+
+            rAboveAvg = relativeCalculatedR > 0
+            rBelowAvg = relativeCalculatedR <= 0
+
+            tp = np.sum(tAboveAvg & rAboveAvg)
+            fp = np.sum(tBelowAvg & rAboveAvg)
+            fn = np.sum(tAboveAvg & rBelowAvg)
+
+            if tp != 0:
+                precision += tp / (tp + fp)
+                recall += tp / (tp + fn)
+                tpNum += 1
+
+        precision = precision / tpNum
+        recall = recall / tpNum
+
+        print("Item based:")
+        print("\tRMSE: {:.2f}".format(RMSE / eNum))
+        print("\tMAE: {:.2f}".format(MAE / eNum))
+        print("\tprecision: {:.2f}".format(precision))
+        print("\trecall: {:.2f}".format(recall))
+        print("\tF1: {:.2f}".format(2 * (precision * recall) / (recall + precision)))
+
+        RMSE = 0
+        MAE = 0
+        eNum = 0
+        precision = 0
+        recall = 0
+        tpNum = 0
+
+        self.UserBasedPredictionFit(K, threshold, prepareDB=False)
+        userNum = 0
+        for u in np.argwhere(testUsers).ravel():
+            self._UserBasedRecommendUser(self.newUser[u], recSeen=False)
+            testItemsRatedUser = testItemsRated[userNum, :]
+            calculatedRatings = self.userAllUserRatings[testItemsRatedUser]
+            realRatings = testItems[userNum, testItemsRatedUser]
+            ratingDifference = (calculatedRatings - self.userAve[u]) - realRatings
+            relativeCalculatedR = calculatedRatings - self.userAve[u]
+            userNum += 1
+
+            if np.sum(testItemsRatedUser) != 0:
+                RMSE += sqrt(np.sum(ratingDifference * ratingDifference) / np.sum(testItemsRatedUser))
+                MAE += np.sum(np.abs(ratingDifference)) / np.sum(testItemsRatedUser)
+                eNum += 1
+
+            tAboveAvg = realRatings > 0
+            tBelowAvg = realRatings <= 0
+
+            rAboveAvg = relativeCalculatedR > 0
+            rBelowAvg = relativeCalculatedR <= 0
+
+            tp = np.sum(tAboveAvg & rAboveAvg)
+            fp = np.sum(tBelowAvg & rAboveAvg)
+            fn = np.sum(tAboveAvg & rBelowAvg)
+
+            if tp != 0:
+                precision += tp / (tp + fp)
+                recall += tp / (tp + fn)
+                tpNum += 1
+
+        precision = precision / tpNum
+        recall = recall / tpNum
+
+        print("Item based:")
+        print("\tRMSE: {:.2f}".format(RMSE / eNum))
+        print("\tMAE: {:.2f}".format(MAE / eNum))
+        print("\tprecision: {:.2f}".format(precision))
+        print("\trecall: {:.2f}".format(recall))
+        print("\tF1: {:.2f}".format(2 * (precision * recall) / (recall + precision)))
+
+        RMSE = 0
+        MAE = 0
+        eNum = 0
+        precision = 0
+        recall = 0
+        tpNum = 0
+
+        self.SlopeOnePredictionFit(prepareDB=False)
+        userNum = 0
+        for u in np.argwhere(testUsers).ravel():
+            self._SlopeOneRecommendUser(self.newUser[u], recSeen=False)
+            testItemsRatedUser = testItemsRated[userNum, :]
+            calculatedRatings = self.s1AllUserRatings[testItemsRatedUser]
+            realRatings = testItems[userNum, testItemsRatedUser]
+            ratingDifference = (calculatedRatings - self.userAve[u]) - realRatings
+            relativeCalculatedR = calculatedRatings - self.userAve[u]
+            userNum += 1
+
+            if np.sum(testItemsRatedUser) != 0:
+                RMSE += sqrt(np.sum(ratingDifference * ratingDifference) / np.sum(testItemsRatedUser))
+                MAE += np.sum(np.abs(ratingDifference)) / np.sum(testItemsRatedUser)
+                eNum += 1
+
+            tAboveAvg = realRatings > 0
+            tBelowAvg = realRatings <= 0
+
+            rAboveAvg = relativeCalculatedR > 0
+            rBelowAvg = relativeCalculatedR <= 0
+
+            tp = np.sum(tAboveAvg & rAboveAvg)
+            fp = np.sum(tBelowAvg & rAboveAvg)
+            fn = np.sum(tAboveAvg & rBelowAvg)
+
+            if tp != 0:
+                precision += tp / (tp + fp)
+                recall += tp / (tp + fn)
+                tpNum += 1
+
+        precision = precision / tpNum
+        recall = recall / tpNum
+
+        print("Item based:")
+        print("\tRMSE: {:.2f}".format(RMSE / eNum))
+        print("\tMAE: {:.2f}".format(MAE / eNum))
+        print("\tprecision: {:.2f}".format(precision))
+        print("\trecall: {:.2f}".format(recall))
+        print("\tF1: {:.2f}".format(2 * (precision * recall) / (recall + precision)))
+
+
