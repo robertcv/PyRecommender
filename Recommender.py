@@ -2,6 +2,7 @@ import numpy as np
 from math import sqrt
 from itertools import combinations, product
 import time
+from sklearn.naive_bayes import GaussianNB
 
 
 class Recommender(object):
@@ -38,6 +39,12 @@ class Recommender(object):
 
         self.W = None
         self.H = None
+
+        self.nbMovieID = None
+        self.nbTagID = None
+        self.nbTagName = None
+        self.nbTagDict = {}
+        self.nbMovieTags = None
 
     def parseMovieDB(self, movie_file, ratedmovies_file):
         start = time.time()
@@ -161,14 +168,19 @@ class Recommender(object):
 #                                                                                                                      #
 ########################################################################################################################
 
-    def similarityFun(self, i1, i2, K):
-        notNan = ~np.isnan(i1) & ~np.isnan(i2)  # finde where both are numbers
-        i1 = i1[notNan]  # remember, for speed
-        i2 = i2[notNan]  # remember, for speed
-        cov = np.dot(i1, i2)
-        var1 = np.dot(i1, i1)
-        var2 = np.dot(i2, i2)
-        return cov / (sqrt(var1) * sqrt(var2) + K)
+    def itemSimilarityFun(self, i1, i2, K, threshold):
+        item1, item2 = self.X[:, i1], self.X[:, i2]
+        notNan = ~np.isnan(item1) & ~np.isnan(item2)  # finde where both are numbers
+        item1 = item1[notNan]  # remember, for speed
+        item2 = item2[notNan]  # remember, for speed
+        cov = np.dot(item1, item2)
+        var1 = np.dot(item1, item1)
+        var2 = np.dot(item2, item2)
+        s = cov / (sqrt(var1) * sqrt(var2) + K)
+        if s < threshold: s = 0
+        self.itemSimilarity[i1, i2] = s  # save it
+        self.itemSimilarity[i2, i1] = s
+
 
     def ItemBasedPredictionFit(self, K, threshold, users=0, items=300, prepareDB=True):
         start = time.time()
@@ -178,10 +190,7 @@ class Recommender(object):
 
         self.itemSimilarity = np.zeros((self.Width, self.Width))  # crate ampty array
         for i1, i2 in combinations(range(self.Width), 2):  # get all combinations of movies
-            s = self.similarityFun(self.X[:, i1], self.X[:, i2], K)  # calculate similarity
-            if s < threshold: s = 0
-            self.itemSimilarity[i1, i2] = s  # save it
-            self.itemSimilarity[i2, i1] = s
+            self.itemSimilarityFun(i1, i2, K, threshold)
 
         print("Time to calculate item similarity: {0:.2f}s".format(time.time() - start))
 
@@ -241,6 +250,18 @@ class Recommender(object):
 #                                                                                                                      #
 #                                                                                                                      #
 ########################################################################################################################
+    def userSimilarityFun(self, u1, u2, K, threshold):
+        user1, user2 = self.X[u1, :], self.X[u2, :]
+        notNan = ~np.isnan(user1) & ~np.isnan(user2)  # finde where both are numbers
+        user1 = user1[notNan]  # remember, for speed
+        user2 = user2[notNan]  # remember, for speed
+        cov = np.dot(user1, user2)
+        var1 = np.dot(user1, user1)
+        var2 = np.dot(user2, user2)
+        s = cov / (sqrt(var1) * sqrt(var2) + K)
+        if s < threshold: s = 0
+        self.userSimilarity[u1, u2] = s  # save it
+        self.userSimilarity[u2, u1] = s
 
     def UserBasedPredictionFit(self, K, threshold, users=500, items=0, prepareDB=True):
         start = time.time()
@@ -250,10 +271,7 @@ class Recommender(object):
 
         self.userSimilarity = np.zeros((self.Height, self.Height))  # crate ampty array
         for u1, u2 in combinations(range(self.Height), 2):  # get all combinations of movies
-            s = self.similarityFun(self.X[u1, :], self.X[u2, :], K)  # calculate similarity
-            if s < threshold: s = 0
-            self.userSimilarity[u1, u2] = s  # save it
-            self.userSimilarity[u2, u1] = s
+            self.userSimilarityFun(u1, u2, K, threshold)  # calculate similarity
 
         print("Time to calculate user similarity: {0:.2f}s".format(time.time() - start))
 
@@ -313,13 +331,19 @@ class Recommender(object):
 ########################################################################################################################
 
     def differenceFunS1(self, i1, i2):
-        notNan = ~np.isnan(i1) & ~np.isnan(i2)  # finde where both are numbers
-        itemSum = np.sum(i2[notNan] - i1[notNan])
+        item1, item2 = self.X[:, i1], self.X[:, i2]
+        notNan = ~np.isnan(item1) & ~np.isnan(item2)  # finde where both are numbers
+        itemSum = np.sum(item2[notNan] - item1[notNan])
         numCommon = np.sum(notNan)
         if numCommon == 0:
-            return 0, 0
+            d, n = 0, 0
         else:
-            return itemSum / numCommon, numCommon
+            d, n = itemSum / numCommon, numCommon
+        self.s1Difference[i1, i2] = d  # save it
+        self.s1DifferenceNum[i1, i2] = n  # save it
+        self.s1Difference[i2, i1] = -d
+        self.s1DifferenceNum[i2, i1] = n  # save it
+
 
     def SlopeOnePredictionFit(self, users=0, items=400, prepareDB=True):
         start = time.time()
@@ -330,11 +354,7 @@ class Recommender(object):
         self.s1DifferenceNum = np.zeros((self.Width, self.Width))
         self.s1Difference = np.zeros((self.Width, self.Width))  # crate ampty array
         for i1, i2 in combinations(range(self.Width), 2):  # get all combinations of movies
-            d, n = self.differenceFunS1(self.X[:, i1], self.X[:, i2])  # calculate similarity
-            self.s1Difference[i1, i2] = d  # save it
-            self.s1DifferenceNum[i1, i2] = n  # save it
-            self.s1Difference[i2, i1] = -d
-            self.s1DifferenceNum[i2, i1] = n  # save it
+            self.differenceFunS1(i1, i2)  # calculate similarity
 
         print("Time to calculate slope on: {0:.2f}s".format(time.time() - start))
 
@@ -434,7 +454,7 @@ class Recommender(object):
     def Evaluet(self, K, threshold):
         self.K = K
         self.threshold = threshold
-        self.reduceDB(300, 500)
+        self.reduceDB(200, 300)
         testUserNum = int(self.Height * 0.3)
         self.testUsers = np.concatenate(
             (np.zeros(self.Height - testUserNum, dtype=bool), np.ones(testUserNum, dtype=bool)))
@@ -577,3 +597,69 @@ class Recommender(object):
 
         self._MatrixFactorizationRecommendUser(user, recSeen)
         self.printRecommendation(self.nmfBasedResults, n)
+
+
+########################################################################################################################
+#                                                                                                                      #
+#                                                                                                                      #
+#                              NAIVE BAYES PREDICTOR                                                                   #
+#                                                                                                                      #
+#                                                                                                                      #
+########################################################################################################################
+
+    def parseTageDB(self, movie_tags_file, tags_file):
+        start = time.time()
+        tags = open(tags_file, 'rt', encoding='utf-8')
+        tagID = []
+        tagName = []
+
+        first_line = tags.readline()  # header line
+        i = 0
+        for line in tags:
+            ln = line.strip().split('\t')
+            tagID.append(ln[0])
+            tagName.append(ln[1])
+            self.nbTagDict[ln[0]] = i
+            i += 1
+
+        width = len(tagID)
+
+        movie_tags = open(movie_tags_file, 'rt', encoding='utf-8')
+        movieSet = set()
+        first_line = movie_tags.readline()
+        for line in movie_tags:
+            ln = line.strip().split('\t')
+            movieSet.add(ln[0])
+
+        height = len(movieSet)  #set the height of the rating matix
+
+        movie_tags = open(movie_tags_file, 'rt', encoding='utf-8')
+        movieID = []  # save user ids
+        self.nbMovieTags = np.zeros((height, width))  # crate an empty matrix
+
+        first_line = movie_tags.readline()
+
+        ln = movie_tags.readline().split('\t')
+        curentM = ln[0]
+        self.nbMovieTags[0, self.nbTagDict[ln[1]]] = 1
+
+        j = 0
+        for line in movie_tags:
+            ln = line.strip().split('\t')
+            if ln[0] == curentM:
+                self.nbMovieTags[j, self.nbTagDict[ln[1]]] = ln[2]
+            else:
+                movieID.append(curentM)
+                curentM = ln[0]
+                j += 1
+                self.nbMovieTags[j, self.nbTagDict[ln[1]]] = ln[2]
+
+        movieID.append(curentM)
+
+        self.nbTagID = np.array(tagID)
+        self.nbTagName = np.array(tagName)
+        self.nbMovieID = np.array(movieID)
+        print("Time to load data: {0:.2f}s".format(time.time() - start))
+
+    def NaiveBayesFit(self, tags=400, prepareDB=True):
+        pass
