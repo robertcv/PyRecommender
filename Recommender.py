@@ -7,44 +7,46 @@ from sklearn.naive_bayes import GaussianNB
 
 class Recommender(object):
     def __init__(self):
+        # for db
         self.movieID = None
         self.movieTitle = []
         self.movieDict = {}
         self.userID = None
         self.userRatings = None
-
+        # for reduced db
         self.userAve = None
         self.X = None
         self.Width = None
         self.Height = None
         self.newUser = None
         self.newMovies = None
-
+        # similarity results
         self.itemSimilarity = None
         self.userSimilarity = None
         self.s1DifferenceNum = None
         self.s1Difference = None
-
+        # ratings for all movies from user
         self.itemAllUserRatings = None
         self.userAllUserRatings = None
         self.s1AllUserRatings = None
         self.hybridAllUserRatings = None
         self.nmfAllUserRatings = None
-
+        # best rated movies for user
         self.itemBasedResults = None
         self.userBasedResults = None
         self.s1BasedResults = None
         self.hybridBasedResults = None
         self.nmfBasedResults = None
-
+        # for nmf
         self.W = None
         self.H = None
-
+        # for nb
         self.nbMovieID = None
         self.nbTagID = None
         self.nbTagName = None
         self.nbTagDict = {}
         self.nbMovieTags = None
+        self.nbBasedResults = None
 
     def parseMovieDB(self, movie_file, ratedmovies_file):
         start = time.time()
@@ -120,12 +122,8 @@ class Recommender(object):
 
     def printRecommendation(self, results, n):
         results.sort(key=lambda tup: -tup[1])  # sort them
-        if len(results) > n:
-            for r in results[:n]:
-                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
-        else:
-            for r in results:
-                print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1]))
+        for r in results[:n]:
+            print("{} - {:.2f}".format(self.movieTitle[self.movieDict[r[0]]], r[1])) # print results
 
 
 ########################################################################################################################
@@ -188,26 +186,26 @@ class Recommender(object):
         if prepareDB:
             self.reduceDB(users, items)
 
-        self.itemSimilarity = np.zeros((self.Width, self.Width))  # crate ampty array
+        self.itemSimilarity = np.zeros((self.Width, self.Width))  # crate empty array
         for i1, i2 in combinations(range(self.Width), 2):  # get all combinations of movies
             self.itemSimilarityFun(i1, i2, K, threshold)
 
         print("Time to calculate item similarity: {0:.2f}s".format(time.time() - start))
 
     def _ItemBasedRecommendUser(self, user, recSeen):
-        userIndex = np.where(self.newUser == user)[0][0]  # finde user index
+        userIndex = np.where(self.newUser == user)[0][0]  # find user index
         notRatedMovies = np.argwhere(np.isnan(self.X[userIndex, :])).ravel()
         ratedMovies = ~np.isnan(self.X[userIndex, :])
         userRatingValue = self.X[userIndex, ratedMovies]
 
         self.itemAllUserRatings = np.zeros(self.Width)
         for i in notRatedMovies:
-            similarity = self.itemSimilarity[i, ratedMovies]
+            similarity = self.itemSimilarity[i, ratedMovies]  # get similarity
             similaritySum = np.sum(similarity)
-            if similaritySum == 0:
+            if similaritySum == 0:  # for zero division
                 rating = 0
             else:
-                rating = np.dot(userRatingValue, similarity) / similaritySum
+                rating = np.dot(userRatingValue, similarity) / similaritySum # calculate rating
             self.itemAllUserRatings[i] = self.userAve[userIndex] + rating
 
         notSeenMovies = np.isnan(self.X[userIndex, :])
@@ -284,10 +282,10 @@ class Recommender(object):
             ratedByUsers = ~np.isnan(self.X[:, i])
             similarity = self.userSimilarity[userIndex, ratedByUsers]
             similaritySum = np.sum(similarity)
-            if similaritySum == 0:
+            if similaritySum == 0: # for zero division
                 rating = 0
             else:
-                rating = np.dot(self.X[ratedByUsers, i], similarity) / similaritySum
+                rating = np.dot(self.X[ratedByUsers, i], similarity) / similaritySum  # calculate rating
             self.userAllUserRatings[i] = self.userAve[userIndex] + rating
 
         notSeenMovies = np.isnan(self.X[userIndex, :])
@@ -352,7 +350,7 @@ class Recommender(object):
             self.reduceDB(users, items)
 
         self.s1DifferenceNum = np.zeros((self.Width, self.Width))
-        self.s1Difference = np.zeros((self.Width, self.Width))  # crate ampty array
+        self.s1Difference = np.zeros((self.Width, self.Width))  # crate empty array
         for i1, i2 in combinations(range(self.Width), 2):  # get all combinations of movies
             self.differenceFunS1(i1, i2)  # calculate similarity
 
@@ -410,22 +408,24 @@ class Recommender(object):
         recall = 0
         tpNum = 0
 
-        fitFnc(self.K, self.threshold, prepareDB=False)
+        fitFnc(self.K, self.threshold, prepareDB=False) #fit data
         userNum = 0
         for u in np.argwhere(self.testUsers).ravel():
-            recommenderFun(self.newUser[u], recSeen=False)
-            testItemsRatedUser = self.testItemsRated[userNum, :]
+            recommenderFun(self.newUser[u], recSeen=False) #recommend for test users
+            testItemsRatedUser = self.testItemsRated[userNum, :] # get recommendet ratings
             calculatedRatings = userRatings(testItemsRatedUser)
-            realRatings = self.testItems[userNum, testItemsRatedUser]
+            realRatings = self.testItems[userNum, testItemsRatedUser] #get real ratings
             ratingDifference = (calculatedRatings - self.userAve[u]) - realRatings
             relativeCalculatedR = calculatedRatings - self.userAve[u]
             userNum += 1
 
+            #calculate RMSE and MAE
             if np.sum(testItemsRatedUser) != 0:
                 RMSE += sqrt(np.sum(ratingDifference * ratingDifference) / np.sum(testItemsRatedUser))
                 MAE += np.sum(np.abs(ratingDifference)) / np.sum(testItemsRatedUser)
                 eNum += 1
 
+            #calculate precision and recall
             tAboveAvg = realRatings > 0
             tBelowAvg = realRatings <= 0
 
@@ -455,11 +455,10 @@ class Recommender(object):
         self.K = K
         self.threshold = threshold
         self.reduceDB(200, 300)
-        testUserNum = int(self.Height * 0.3)
-        self.testUsers = np.concatenate(
-            (np.zeros(self.Height - testUserNum, dtype=bool), np.ones(testUserNum, dtype=bool)))
-        np.random.shuffle(self.testUsers)
-        testItemNum = int(self.Width * 0.5)
+        testUserNum = int(self.Height * 0.3) # 30% users for testing
+        self.testUsers = np.concatenate((np.zeros(self.Height - testUserNum, dtype=bool), np.ones(testUserNum, dtype=bool)))
+        np.random.shuffle(self.testUsers) # get random test users
+        testItemNum = int(self.Width * 0.5) # 50% items for calculating acurasety
         self.testItems = np.copy(self.X[self.testUsers, :])
         self.testItemsRated = ~np.isnan(self.X[self.testUsers, :])
         self.X[self.testUsers, :testItemNum] = np.nan
@@ -493,6 +492,7 @@ class Recommender(object):
         if prepareDB:
             self.reduceDB(users, items)
 
+        # run fit functions
         self.ItemBasedPredictionFit(K, threshold, prepareDB=False)
         self.UserBasedPredictionFit(K, threshold, prepareDB=False)
         self.SlopeOnePredictionFit(prepareDB=False)
@@ -502,7 +502,7 @@ class Recommender(object):
         self._ItemBasedRecommendUser(user, recSeen)
         self._UserBasedRecommendUser(user, recSeen)
         self._SlopeOneRecommendUser(user, recSeen)
-
+        #calculate hybrid result
         self.hybridAllUserRatings = 1 / 2 * self.itemAllUserRatings + 2 / 6 * self.userAllUserRatings + 1 / 6 * self.s1AllUserRatings
         userIndex = np.where(self.newUser == user)[0][0]  # finde user index
         notSeenMovies = np.isnan(self.X[userIndex, :])
@@ -609,6 +609,7 @@ class Recommender(object):
 
     def parseTageDB(self, movie_tags_file, tags_file):
         start = time.time()
+        #get tag info
         tags = open(tags_file, 'rt', encoding='utf-8')
         tagID = []
         tagName = []
@@ -623,7 +624,7 @@ class Recommender(object):
             i += 1
 
         width = len(tagID)
-
+        #get movies with tags
         movie_tags = open(movie_tags_file, 'rt', encoding='utf-8')
         movieSet = set()
         first_line = movie_tags.readline()
@@ -634,7 +635,7 @@ class Recommender(object):
         height = len(movieSet)  #set the height of the rating matix
 
         movie_tags = open(movie_tags_file, 'rt', encoding='utf-8')
-        movieID = []  # save user ids
+        movieID = []
         self.nbMovieTags = np.zeros((height, width))  # crate an empty matrix
 
         first_line = movie_tags.readline()
@@ -647,12 +648,12 @@ class Recommender(object):
         for line in movie_tags:
             ln = line.strip().split('\t')
             if ln[0] == curentM:
-                self.nbMovieTags[j, self.nbTagDict[ln[1]]] = ln[2]
+                self.nbMovieTags[j, self.nbTagDict[ln[1]]] = 1
             else:
                 movieID.append(curentM)
                 curentM = ln[0]
                 j += 1
-                self.nbMovieTags[j, self.nbTagDict[ln[1]]] = ln[2]
+                self.nbMovieTags[j, self.nbTagDict[ln[1]]] = 1
 
         movieID.append(curentM)
 
@@ -661,5 +662,52 @@ class Recommender(object):
         self.nbMovieID = np.array(movieID)
         print("Time to load data: {0:.2f}s".format(time.time() - start))
 
-    def NaiveBayesFit(self, tags=400, prepareDB=True):
-        pass
+    def NaiveBayes(self, user, aboveAvg, n=10, tags=10, movies=10):
+        self.reduceDB(0, 0)
+        if user not in self.newUser:
+            print("User has not enough ratings!")
+            return
+        # reduce tags matrix
+        usableTags = np.sum(self.nbMovieTags, axis=0) > tags
+        usableMovies = np.sum(self.nbMovieTags, axis=1) > movies
+        self.nbMovieTags = self.nbMovieTags[usableMovies, :]
+        self.nbMovieTags = self.nbMovieTags[:, usableTags]
+        self.nbTagID = self.nbTagID[usableTags]
+        self.nbMovieID = self.nbMovieID[usableMovies]
+
+        userIndex = np.where(self.newUser == user)[0][0]
+        userRatings = self.X[userIndex, :]
+        userRated = ~np.isnan(userRatings)
+        userRatings = np.nan_to_num(userRatings)
+        aboveAvgRatings = userRatings > aboveAvg
+        x = []
+        y = []
+        predict = []
+        predictMovies = []
+        for i in range(len(userRatings)):
+            if self.newMovies[i] in self.nbMovieID:
+                movieIndex = np.where(self.nbMovieID == self.newMovies[i])[0][0]
+                if userRated[i]:
+                    x.append(self.nbMovieTags[movieIndex, :])
+                    if aboveAvgRatings[i]:
+                        y.append(1)
+                    else:
+                        y.append(-1)
+                else:
+                    predict.append(self.nbMovieTags[movieIndex, :])
+                    predictMovies.append(self.newMovies[i])
+
+        x = np.array(x)
+        y = np.array(y)
+        predict = np.array(predict)
+
+        clf = GaussianNB()
+        clf.fit(x, y)
+        prediction = clf.predict(predict)
+        proba = clf.predict_proba(predict)
+        self.nbBasedResults = []
+        for i in range(len(prediction)):
+            if prediction[i] == 1:
+                self.nbBasedResults.append((predictMovies[i], proba[i, 1]))
+
+        self.printRecommendation(self.nbBasedResults, n)
