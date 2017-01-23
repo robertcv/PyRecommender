@@ -3,6 +3,7 @@ from math import sqrt
 from itertools import combinations, product
 import time
 from sklearn.naive_bayes import GaussianNB
+import matplotlib.pyplot as plt
 
 
 class Recommender(object):
@@ -528,7 +529,7 @@ class Recommender(object):
 ########################################################################################################################
 #                                                                                                                      #
 #                                                                                                                      #
-#                              HYBRID PREDICTOR                                                                        #
+#                              MATRIX FACTORIZATION                                                                    #
 #                                                                                                                      #
 #                                                                                                                      #
 ########################################################################################################################
@@ -597,6 +598,24 @@ class Recommender(object):
 
         self._MatrixFactorizationRecommendUser(user, recSeen)
         self.printRecommendation(self.nmfBasedResults, n)
+
+    def MatrikFactorizationGraph(self, n=20):
+        maxIndex = np.sum(~np.isnan(self.X), axis=0).argsort()[-n:][::-1]
+        row1 = self.H.T[0, maxIndex]
+        row2 = self.H.T[1, maxIndex]
+        movies = self.newMovies[maxIndex]
+        movieTitles = [self.movieTitle[self.movieDict[m]] for m in movies]
+
+        for i in range(len(movies)):
+            plt.annotate(movieTitles[i], xy=(row1[i], row2[i]), xytext=(row1[i], row2[i]),
+                         horizontalalignment='center',
+                         verticalalignment='center', )
+        plt.ylim([-0.5, 2.5])
+        plt.xlim([-0.5, 2.5])
+        plt.show()
+
+
+
 
 
 ########################################################################################################################
